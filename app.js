@@ -20,17 +20,18 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.get('/makecampground', async (req, res) => {
-    const camp = new Campground({ title: 'Camp1', description: 'just just'});
-    await camp.save()
-    .then(() => {
-       res.send(camp) 
-    })
-    .catch(e => {
-        res.send('WTF01') 
-    })
+app.get('/campgrounds', async (req, res) => {
+    const campgrounds = await Campground.find({});
+    res.render('campgrounds/index', { campgrounds });
+})
+app.get('/campgrounds/:id', async (req, res) => {
+    const { id } = req.params;
+    const campground = await Campground.findById(id);
+    console.log(campground);
+    res.render('campgrounds/show', { campground });
 })
 
-app.listen(port, () => {
+
+app.listen(port, () => {    
     console.log(`Serving on port ${port} 👂`);
 })
