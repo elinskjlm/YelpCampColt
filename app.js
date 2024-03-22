@@ -20,10 +20,37 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+// app.use((req, res, next) => {
+//     console.log(`New Request:`);
+//     console.log(`\tHost: ${req.hostname}`);
+//     console.log(`\tPath: ${req.path}`);
+//     console.log(`\tMethod: ${req.method}`);
+//     console.log(`\tParams: ${req.params}`);
+//     console.log(`\tProtocol: ${req.protocol}`);
+//     console.log(`\tBody: ${req.body}`);
+//     console.log(`\tApp: ${req.app}`);
+//     next();
+// })
+
+app.use(express.urlencoded({extended: true}));
+// app.use(express.json())
+
 app.get('/campgrounds', async (req, res) => {
     const campgrounds = await Campground.find({});
     res.render('campgrounds/index', { campgrounds });
 })
+
+app.get('/campgrounds/new', async (req, res) => {
+    res.render('campgrounds/new');
+})
+
+app.post('/campgrounds', async (req, res) => {
+    const newCamp = new Campground(req.body);
+    const id = newCamp._id;
+    await newCamp.save();
+    res.redirect(`campgrounds/${id}`);
+})
+
 app.get('/campgrounds/:id', async (req, res) => {
     const { id } = req.params;
     const campground = await Campground.findById(id);
