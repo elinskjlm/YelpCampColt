@@ -16,6 +16,9 @@
     </ul>
 
     <a href="/campgrounds/<%= campground._id %>/edit">Edit 🖍️</a>
+    <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+        <button>Delete 🗑️</button>
+    </form>
     <a href="/campgrounds">Back to main 🏠</a>
 </body>
 </html>
