@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Campground = require('./models/campground');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,7 @@ db.once('open', () => {
     console.log('Database Connected 🤝');
 })
 
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -62,7 +64,6 @@ app.get('/campgrounds/:id', async (req, res) => {
 app.get('/campgrounds/:id/edit', async (req, res) => {
     const { id } = req.params;
     try {
-        console.log(id);
         const camp = await Campground.findById(id);
         res.render('campgrounds/edit', { camp });
     }
@@ -74,7 +75,8 @@ app.get('/campgrounds/:id/edit', async (req, res) => {
 
 app.put('/campgrounds/:id', async (req, res) => {
     const { id } = req.params;
-    const camp = await Campground.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
+    // const camp = await Campground.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
+    const camp = await Campground.findByIdAndUpdate(id, { ...req.body }, { runValidators: true, new: true });
     res.redirect(`/campgrounds/${id}`);
 })
 

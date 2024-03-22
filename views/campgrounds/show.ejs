@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
-</head>
-<body>
-    <h1><%= campground.title %></h1>
+<% layout('layouts/boilerplate') %>
+
+    <h1>
+        <%= campground.title %>
+    </h1>
     <ul>
-        <li>Price: <%= campground.price %></li>
-        <li>City: <%= campground.city %></li>
-        <li>State: <%= campground.state %></li>
-        <li>Description: <%= campground.description %></li>
-        <li>Id: <%= campground._id %></li>
+        <li>Price: <%= campground.price %>
+        </li>
+        <li>City: <%= campground.city %>
+        </li>
+        <li>State: <%= campground.state %>
+        </li>
+        <li>Description: <%= campground.description %>
+        </li>
+        <li>Id: <%= campground._id %>
+        </li>
     </ul>
 
     <a href="/campgrounds/<%= campground._id %>/edit">Edit 🖍️</a>
@@ -20,5 +21,3 @@
         <button>Delete 🗑️</button>
     </form>
     <a href="/campgrounds">Back to main 🏠</a>
-</body>
-</html>
