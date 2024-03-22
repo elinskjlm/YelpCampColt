@@ -11,8 +11,11 @@
         <li>Price: <%= campground.price %></li>
         <li>City: <%= campground.city %></li>
         <li>State: <%= campground.state %></li>
+        <li>Description: <%= campground.description %></li>
+        <li>Id: <%= campground._id %></li>
     </ul>
 
+    <a href="/campgrounds/<%= campground._id %>/edit">Edit 🖍️</a>
     <a href="/campgrounds">Back to main 🏠</a>
 </body>
 </html>

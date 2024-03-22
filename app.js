@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const Campground = require('./models/campground');
+const methodOverride = require('method-override');
 
 const app = express();
 const port = 3000;
@@ -10,15 +11,11 @@ mongoose.connect('mongodb://localhost:27017/yelp-camp');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection Error:'));
 db.once('open', () => {
-    console.log('Database Connected.');
+    console.log('Database Connected 🤝');
 })
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-app.get('/', (req, res) => {
-    res.render('home')
-})
 
 // app.use((req, res, next) => {
 //     console.log(`New Request:`);
@@ -34,6 +31,11 @@ app.get('/', (req, res) => {
 
 app.use(express.urlencoded({extended: true}));
 // app.use(express.json())
+app.use(methodOverride('_method'));
+
+app.get('/', (req, res) => {
+    res.render('home')
+})
 
 app.get('/campgrounds', async (req, res) => {
     const campgrounds = await Campground.find({});
@@ -54,10 +56,27 @@ app.post('/campgrounds', async (req, res) => {
 app.get('/campgrounds/:id', async (req, res) => {
     const { id } = req.params;
     const campground = await Campground.findById(id);
-    console.log(campground);
     res.render('campgrounds/show', { campground });
 })
 
+app.get('/campgrounds/:id/edit', async (req, res) => {
+    const { id } = req.params;
+    try {
+        console.log(id);
+        const camp = await Campground.findById(id);
+        res.render('campgrounds/edit', { camp });
+    }
+    catch (err) {
+        console.log(err);
+        res.send(`Error while trying to edit. Check terminal`);
+    }
+})
+
+app.put('/campgrounds/:id', async (req, res) => {
+    const { id } = req.params;
+    const camp = await Campground.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
+    res.redirect(`/campgrounds/${id}`);
+})
 
 app.listen(port, () => {    
     console.log(`Serving on port ${port} 👂`);
