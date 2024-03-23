@@ -1,26 +1,32 @@
 <% layout('layouts/boilerplate') %>
 
-    <h1>
-        <%= campground.title %>
-    </h1>
-    <img src=<%= campground.image %> alt="campground image">
-    <ul>
-        <li>Image URL: <%= campground.image %>
-        </li>
-        <li>Price: <%= campground.price %>
-        </li>
-        <li>City: <%= campground.city %>
-        </li>
-        <li>State: <%= campground.state %>
-        </li>
-        <li>Description: <%= campground.description %>
-        </li>
-        <li>Id: <%= campground._id %>
-        </li>
-    </ul>
-
-    <a href="/campgrounds/<%= campground._id %>/edit">Edit 🖍️</a>
-    <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-        <button>Delete 🗑️</button>
-    </form>
-    <a href="/campgrounds">Back to main 🏠</a>
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card mb-3" style="width: 18rem;">
+        <img src=<%=campground.image %> class="card-img-top" alt="campground image">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= campground.title %>
+          </h5>
+          <p class="card-text">
+            <%= campground.description %>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">📍 <%= campground.city %>, <%= campground.state %>
+          </li>
+          <li class="list-group-item">🫰🏻 &#8362;<%= campground.price %> / Night</li>
+          <!-- <li class="list-group-item">A third item</li> -->
+        </ul>
+        <div class="card-body">
+          <a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit 🖍️</a>
+          <form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete 🗑️</button>
+          </form>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="/campgrounds" class="card-link">Back to main 🏠</a>
+        </div>
+      </div>
+    </div>
+  </div>
