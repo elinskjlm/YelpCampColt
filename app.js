@@ -49,10 +49,20 @@ app.get('/campgrounds/new', async (req, res) => {
 })
 
 app.post('/campgrounds', async (req, res) => {
-    const newCamp = new Campground(req.body);
-    const id = newCamp._id;
-    await newCamp.save();
-    res.redirect(`campgrounds/${id}`);
+    try {
+        req.body.image = req.body.image.indexOf("/") >= 0 ? req.body.image : "/"+req.body.image
+        const newCamp = new Campground(req.body);
+        const id = newCamp._id;
+        await newCamp.save();
+        res.redirect(`campgrounds/${id}`);
+    }
+    catch (err) {
+        // console.log(`Error while POSTing:\n\t${err.message}`);
+        // console.log(`Error while POSTing:\n\t${err}`);
+        console.log(`Error while POSTing:`);
+        res.send(`Error while trying to POST. Check terminal`);
+    }
+
 })
 
 app.get('/campgrounds/:id', async (req, res) => {
@@ -68,12 +78,14 @@ app.get('/campgrounds/:id/edit', async (req, res) => {
         res.render('campgrounds/edit', { camp });
     }
     catch (err) {
-        console.log(err);
+        // console.log(err);
+        console.log(`Error while GETting to edit`);
         res.send(`Error while trying to edit. Check terminal`);
     }
 })
 
 app.put('/campgrounds/:id', async (req, res) => {
+    // TODO make sure image URL is valid, or at least contains "/" in it 
     const { id } = req.params;
     // const camp = await Campground.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
     const camp = await Campground.findByIdAndUpdate(id, { ...req.body }, { runValidators: true, new: true });
