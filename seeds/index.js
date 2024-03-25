@@ -23,9 +23,10 @@ cleanDB();
 seedDB()
 .then(() => {
      console.log('Seed Then');
-     db.close();
 })
 .catch(err => {
     console.log('Seed Catch', err);
+})
+.finally(() => {
     db.close();
 });
