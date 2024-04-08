@@ -3,7 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
-const Joi = require('joi');
+const { campgroundSchema } = require('./schemas');
 const Campground = require('./models/campground');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
@@ -39,6 +39,16 @@ app.use(express.urlencoded({extended: true}));
 // app.use(express.json())
 app.use(methodOverride('_method'));
 
+const validateCampground = (req, res, next) => {
+    const { error } = campgroundSchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(el => el.message).join(',\t');
+        throw new ExpressError(msg, 400);
+    } else {
+        next();
+    }
+}
+
 app.get('/', (req, res) => {
     res.render('home')
 })
@@ -52,26 +62,8 @@ app.get('/campgrounds/new', catchAsync(async (req, res) => {
     res.render('campgrounds/new');
 }))
 
-app.post('/campgrounds', catchAsync(async (req, res, next) => {
-    if (!req.body.campground) throw new ExpressError('Invalid campground data', 400);
+app.post('/campgrounds', validateCampground, catchAsync(async (req, res, next) => {
     // req.body.image = req.body.campground.image.indexOf("/") >= 0 ? req.body.image : "/"+req.body.image
-    const campgroundSchema = Joi.object({
-       campground: Joi.object({
-        title: Joi.string().required(),
-        price: Joi.number().required().min(0),
-        image: Joi.string().required(),
-        description: Joi.string().required(),
-        city: Joi.string().required(),
-        state: Joi.string().required(),
-       }).required() 
-    })
-    const { error } = campgroundSchema.validate(req.body);
-    if (error) {
-        const msg = error.details.map(el => el.message).join(',\t');
-        throw new ExpressError(msg, 400);
-    }
-    console.log('I\'M HERE')
-    console.dir(error);
     const newCamp = new Campground(req.body.campground);
     const id = newCamp._id;
     await newCamp.save();
@@ -90,10 +82,10 @@ app.get('/campgrounds/:id/edit', catchAsync(async (req, res) => {
     res.render('campgrounds/edit', { camp });
 }))
 
-app.put('/campgrounds/:id', catchAsync(async (req, res) => {
+app.put('/campgrounds/:id', validateCampground, catchAsync(async (req, res) => {
     // TODO make sure image URL is valid, or at least contains "/" in it 
     const { id } = req.params;
-    const camp = await Campground.findByIdAndUpdate(id, { ...req.body }, { runValidators: true, new: true });
+    const camp = await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });
     res.redirect(`/campgrounds/${id}`);
 }))
 
