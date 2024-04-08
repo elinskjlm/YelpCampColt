@@ -6,36 +6,36 @@
     <div class="row">
         <h1 class="text-center">Editing "<%= camp.title %>"</h1>
         <div class="col-6 offset-3">
-            <form action="/campgrounds/<%= camp.id %>?_method=PUT" method="POST">
+            <form action="/campgrounds/<%= camp.id %>?_method=PUT" method="POST" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label class="form-label" for="title">Name</label>
-                    <input class="form-control" type="text" name="title" id="title" placeholder="Name" value="<%= camp.title %>">
+                    <input class="form-control" type="text" name="title" id="title" placeholder="Name" value="<%= camp.title %>" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="price">Price</label>
                     <div class="input-group">
                         <span class="input-group-text">&#8362;</span>
                         <input type="number" class="form-control" name="price" id="price" placeholder="Price" value="<%= camp.price %>"
-                            aria-label="Amount (to the nearest ILS)">
+                            aria-label="Amount (to the nearest ILS)" required>
                         <span class="input-group-text">.00</span>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="image">Image</label>
-                    <input class="form-control" type="text" name="image" id="image" placeholder="Image URL" value="<%= camp.image %>">
+                    <input class="form-control" type="text" name="image" id="image" placeholder="Image URL" value="<%= camp.image %>" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="description">Description</label><br>
                     <textarea class="form-control" name="description" id="description" rows="4" cols="50"
-                        placeholder="Description"><%= camp.description %></textarea>
+                        placeholder="Description" required><%= camp.description %></textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="city">City</label>
-                    <input class="form-control" type="text" name="city" id="city" placeholder="City" value="<%= camp.city %>">
+                    <input class="form-control" type="text" name="city" id="city" placeholder="City" value="<%= camp.city %>" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="state">State</label>
-                    <input class="form-control" type="text" name="state" id="state" placeholder="State" value="<%= camp.state %>">
+                    <input class="form-control" type="text" name="state" id="state" placeholder="State" value="<%= camp.state %>" required>
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-info">Commit changes</button>
