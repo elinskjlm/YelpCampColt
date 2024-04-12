@@ -5,9 +5,9 @@ const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
 const { campgroundSchema } = require('./schemas');
 const Campground = require('./models/campground');
+const Review = require('./models/review');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
-const campground = require('./models/campground');
 
 const app = express();
 const port = 3000;
@@ -93,6 +93,15 @@ app.delete('/campgrounds/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
     await Campground.findByIdAndDelete(id);
     res.redirect(`/campgrounds`);
+}))
+
+app.post('/campgrounds/:id/reviews', catchAsync(async(req, res) => {
+    const campground = await Campground.findById(req.params.id);
+    const review = new Review(req.body.review);
+    campground.reviews.push(review);
+    await review.save(); // TODO do both savings in same time
+    await campground.save();
+    res.redirect(`/campgrounds/${campground._id}`);
 }))
 
 app.all('*' , (req, res, next) => {
