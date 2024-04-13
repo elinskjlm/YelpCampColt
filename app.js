@@ -8,6 +8,7 @@ const Campground = require('./models/campground');
 const Review = require('./models/review');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
+const review = require('./models/review');
 
 const app = express();
 const port = 3000;
@@ -82,7 +83,6 @@ app.post('/campgrounds', validateCampground, catchAsync(async (req, res, next) =
 
 app.get('/campgrounds/:id', catchAsync(async (req, res) => {
     const campground = await Campground.findById(req.params.id).populate('reviews');
-    console.log(campground);
     res.render('campgrounds/show', { campground });
 }))
 
@@ -112,6 +112,13 @@ app.post('/campgrounds/:id/reviews', validateReview, catchAsync(async(req, res) 
     await review.save(); // TODO do both savings in same time
     await campground.save();
     res.redirect(`/campgrounds/${campground._id}`);
+}))
+
+app.delete('/campgrounds/:campId/reviews/:reviewId', catchAsync(async (req, res) => {
+    const { campId, reviewId } = req.params;
+    Campground.findByIdAndUpdate(campId, {$pull: { reviews: reviewId }})
+    await review.findByIdAndDelete(reviewId);
+    res.redirect(`/campgrounds/${campId}`);
 }))
 
 app.all('*' , (req, res, next) => {
