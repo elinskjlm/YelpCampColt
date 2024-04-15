@@ -1,0 +1,14 @@
+<% if (success.length) { %>
+    <!-- if there is a reason to flash few 'success' alerts at once: should make it iterate over them to add -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+<% if (error.length) { %>
+    <!-- if there is a reason to flash few 'success' alerts at once: should make it iterate over them to add -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>

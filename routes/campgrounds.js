@@ -24,17 +24,26 @@ router.get('/new', catchAsync(async (req, res) => {
     res.render('campgrounds/new');
 }))
 
-router.post('', validateCampground, catchAsync(async (req, res, next) => {
+router.post('/', validateCampground, catchAsync(async (req, res, next) => {
     // req.body.image = req.body.campground.image.indexOf("/") >= 0 ? req.body.image : "/"+req.body.image
     const newCamp = new Campground(req.body.campground);
     const id = newCamp._id;
     await newCamp.save();
+    req.flash('success', 'Succesfully made a new campground 👍🏻');
     res.redirect(`campgrounds/${id}`);
 }))
 
 router.get('/:id', catchAsync(async (req, res) => {
-    const campground = await Campground.findById(req.params.id).populate('reviews');
-    res.render('campgrounds/show', { campground });
+    const { id } = req.params;
+    const regexId = /^[0-9a-f]{24}$/i;
+    const idIsValid = regexId.test(id);
+    if (idIsValid) {
+        const campground = await Campground.findById(id).populate('reviews');
+        if (campground) return res.render('campgrounds/show', { campground });
+    }
+    const shortId = id.length <= 24 ? id : (id.slice(0, 10) + '...');
+    req.flash('error', `No campground with this id (${shortId})`);
+    return res.redirect('/campgrounds');
 }))
 
 router.get('/:id/edit', catchAsync(async (req, res) => {
@@ -47,12 +56,14 @@ router.put('/:id', validateCampground, catchAsync(async (req, res) => {
     // TODO make sure image URL is valid, or at least contains "/" in it 
     const { id } = req.params;
     const camp = await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });
+    req.flash('success', 'Successfully updated campground 👍🏻')
     res.redirect(`/campgrounds/${id}`);
 }))
 
 router.delete('/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
     await Campground.findByIdAndDelete(id);
+    req.flash('success', 'Successfully deleted the campground 👍🏻');
     res.redirect(`/campgrounds`);
 }))
 
