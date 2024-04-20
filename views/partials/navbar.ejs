@@ -15,14 +15,18 @@
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <% if (currentUser) { %>
+                <% if (currentUser) { %>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
-                    <% } else { %>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/register">Sign up</a>
-                    <% } %>
-                </li>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </div>
