@@ -5,6 +5,7 @@ const { isLoggedIn } =          require('../middleware');
 const catchAsync =              require('../utils/catchAsync');
 const ExpressError =            require('../utils/ExpressError');
 const Campground =              require('../models/campground');
+const campground = require('../models/campground');
 
 const validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
@@ -28,6 +29,7 @@ router.get('/new', isLoggedIn, catchAsync(async (req, res) => {
 router.post('/', isLoggedIn, validateCampground, catchAsync(async (req, res, next) => {
     // req.body.image = req.body.campground.image.indexOf("/") >= 0 ? req.body.image : "/"+req.body.image
     const newCamp = new Campground(req.body.campground);
+    newCamp.author = req.user._id;
     const id = newCamp._id;
     await newCamp.save();
     req.flash('success', 'Succesfully made a new campground 👍🏻');
@@ -39,7 +41,7 @@ router.get('/:id', catchAsync(async (req, res) => {
     const regexId = /^[0-9a-f]{24}$/i;
     const idIsValid = regexId.test(id);
     if (idIsValid) {
-        const campground = await Campground.findById(id).populate('reviews');
+        const campground = await Campground.findById(id).populate('reviews').populate('author');
         if (campground) return res.render('campgrounds/show', { campground });
     }
     const shortId = id.length <= 24 ? id : (id.slice(0, 10) + '...');

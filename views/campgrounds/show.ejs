@@ -16,7 +16,7 @@
         <li class="list-group-item text-muted">📍 <%= campground.city %>, <%= campground.state %>
         </li>
         <li class="list-group-item">🫰🏻 &#8362;<%= campground.price %> / Night</li>
-        <!-- <li class="list-group-item">A third item</li> -->
+        <li class="list-group-item">🙎🏻‍♂️ <%= campground.author.username %></li>
       </ul>
       <div class="card-body">
         <a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit 🖍️</a>
