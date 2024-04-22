@@ -17,6 +17,9 @@
             <ul class="navbar-nav ms-auto">
                 <% if (currentUser) { %>
                     <li class="nav-item">
+                        <a class="nav-link disabled" aria-current="page" href="#"><%= currentUser.username %></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
                     </li>
                 <% } else { %>
