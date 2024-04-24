@@ -2,7 +2,7 @@ const express =     require('express');
 const router =      express.Router();
 const catchAsync =  require('../utils/catchAsync');
 const Campground =  require('../models/campground');
-const { isLoggedIn, isAuthor, validateCampground } = require('../middleware');
+const { isLoggedIn, isAuthor, validateCampground, saveInfoToSession, copyToLocals } = require('../middleware');
 
 
 router.get('/', catchAsync(async (req, res) => {
@@ -10,11 +10,11 @@ router.get('/', catchAsync(async (req, res) => {
     res.render('campgrounds/index', { campgrounds });
 }))
 
-router.get('/new', isLoggedIn, catchAsync(async (req, res) => {
+router.get('/new', saveInfoToSession, isLoggedIn, catchAsync(async (req, res) => {
     res.render('campgrounds/new');
 }))
 
-router.post('/', isLoggedIn, validateCampground, catchAsync(async (req, res, next) => {
+router.post('/', copyToLocals, isLoggedIn, validateCampground, catchAsync(async (req, res, next) => {
     // req.body.image = req.body.campground.image.indexOf("/") >= 0 ? req.body.image : "/"+req.body.image
     const newCamp = new Campground(req.body.campground);
     newCamp.author = req.user._id;
@@ -28,16 +28,24 @@ router.get('/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
     const regexId = /^[0-9a-f]{24}$/i;
     const idIsValid = regexId.test(id);
+    const reviewDraft = req.session.reviewDraft;
+    delete req.session.reviewDraft;
+    // console.log(`res.locals ${JSON.stringify(res.locals)}`);
     if (idIsValid) {
-        const campground = await Campground.findById(id).populate('reviews').populate('author');
-        if (campground) return res.render('campgrounds/show', { campground });
+        const campground = await Campground.findById(id)
+        .populate({path: 'reviews', populate: {
+            path: 'author'
+        }})
+        .populate('author');
+        // console.dir('👻👻👻👻' + JSON.stringify(req.session));
+        if (campground) return res.render('campgrounds/show', { campground, reviewDraft });
     }
     const shortId = id.length <= 24 ? id : (id.slice(0, 10) + '...');
     req.flash('error', `No campground with this id (${shortId})`);
     return res.redirect('/campgrounds');
 }))
 
-router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(async (req, res) => {
+router.get('/:id/edit', saveInfoToSession, isLoggedIn, isAuthor, catchAsync(async (req, res) => {
     const { id } = req.params;
     const camp = await Campground.findById(id);
     if (!camp) {
@@ -47,7 +55,7 @@ router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(async (req, res) => {
     res.render('campgrounds/edit', { camp });
 }))
 
-router.put('/:id', isLoggedIn, isAuthor, validateCampground, catchAsync(async (req, res) => {
+router.put('/:id', copyToLocals, isLoggedIn, isAuthor, validateCampground, catchAsync(async (req, res) => {
     // TODO make sure image URL is valid, or at least contains "/" in it 
     const { id } = req.params;
     const camp = await Campground.findById(id);

@@ -3,20 +3,22 @@ const router =              express.Router({ mergeParams: true });
 const catchAsync =          require('../utils/catchAsync');
 const Campground =          require('../models/campground');
 const Review =              require('../models/review');
-const { validateReview } =  require('../middleware');
+const { validateReview, isAuthor, isLoggedIn, copyToLocals, saveInfoToSession } =  require('../middleware');
 
 
-router.post('/', validateReview, catchAsync(async(req, res) => {
+router.post('/', saveInfoToSession, copyToLocals, isLoggedIn, validateReview, catchAsync(async(req, res) => {
     const campground = await Campground.findById(req.params.id);
     const review = new Review(req.body.review);
+    review.author = req.user._id;
     campground.reviews.push(review);
     await review.save(); // TODO do both savings in same time
     await campground.save();
+    delete req.session.reviewDraft;
     req.flash('success', 'Successfully added new review 👌🏻');
     res.redirect(`/campgrounds/${campground._id}`);
 }))
 
-router.delete('/:reviewId', catchAsync(async (req, res) => {
+router.delete('/:reviewId', isLoggedIn, isAuthor, catchAsync(async (req, res) => {
     const { id, reviewId } = req.params;
     Campground.findByIdAndUpdate(id, {$pull: { reviews: reviewId }})
     await Review.findByIdAndDelete(reviewId);

@@ -1,14 +1,14 @@
 const express =             require('express');
-const { storeReturnTo } =   require('../middleware');
+const { saveInfoToSession, copyToLocals } =   require('../middleware');
 const User =                require('../models/user');
 const catchAsync =          require('../utils/catchAsync');
 const passport =            require('passport');
 const router =              express.Router();
 
-router.get('/register', (req, res) => {
+router.get('/register', saveInfoToSession, (req, res) => {
     res.render('users/register')
 })
-router.post('/register', catchAsync (async (req, res) => {
+router.post('/register', copyToLocals, catchAsync (async (req, res) => {
     try {
         const { email, username, password } = req.body;
         const user = new User({ email, username });
@@ -16,7 +16,9 @@ router.post('/register', catchAsync (async (req, res) => {
         req.login(registeredUser, err => {
             if (err) return next(err);
             req.flash('success', 'Welcome to Yelp Camp 🤷🏻‍♂️');
-            res.redirect('/campgrounds');
+            const redirectUrl = res.locals.wantsTo || '/';
+            delete req.session.wantsTo;
+            res.redirect(redirectUrl);
         })
     } catch(e) {
         req.flash('error', e.message);
@@ -24,24 +26,30 @@ router.post('/register', catchAsync (async (req, res) => {
     }
 }))
 
-router.get('/login', (req, res) => {
+router.get('/login', saveInfoToSession, (req, res) => {
     res.render('users/login');
 })
 
-router.post('/login', storeReturnTo, passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), (req, res) => {
+router.post('/login', copyToLocals, passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), (req, res) => {
+    // console.log(`router.post('/login'\t`);
     req.flash('success', 'Welcome back 🙄');
-    const redirectUrl = res.locals.returnTo || '/campgrounds';
-    delete req.session.returnTo;
+    const redirectUrl = res.locals.wantsTo || '/';
+    delete req.session.wantsTo;
+    req.session.reviewDraft = res.locals.reviewDraft;
+    // console.log('🤡' + JSON.stringify(res.locals));
+    // console.log('🤡' + JSON.stringify(req.session));
     res.redirect(redirectUrl);
 })
 
-router.get('/logout', (req, res, next) => {
+router.get('/logout', saveInfoToSession, copyToLocals, (req, res, next) => {
     req.logOut(function (err) {
         if (err) {
             return next(err);
         }
         req.flash('success', 'Logged out 🥾');
-        res.redirect('/campgrounds');
+        delete req.session.wantsTo;
+        delete req.session.cameFrom;
+        res.redirect(res.locals.wantsTo || '/campgrounds');
     });
 })
 

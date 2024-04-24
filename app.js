@@ -12,7 +12,7 @@ const userRoutes =          require('./routes/users');
 const User =                require('./models/user');
 const passport =            require('passport');
 const LocalStrategy =       require('passport-local');
-
+const {tempFunc} = require('./middleware');
 const app = express();
 const port = 3000;
 
@@ -30,7 +30,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
-
 const sessionConfig = {
     secret: 'temporaryTODOreplaceIt',
     resave: false,
@@ -58,6 +57,7 @@ app.use((req, res, next) => {
     next();
 })
 
+// app.use(tempFunc)
 app.use('/', userRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/reviews', reviewRoutes);
