@@ -1,6 +1,7 @@
 const { reviewSchema, campgroundSchema } = require('./schemas');
 const ExpressError =            require('./utils/ExpressError');
 const Campground =              require('./models/campground');
+const Review =                  require('./models/review');
 // const { session } = require('passport');
 
 module.exports.isLoggedIn = (req, res, next) => {
@@ -18,11 +19,19 @@ module.exports.storeReturnTo = (req, res, next) => {
 }
 
 module.exports.isAuthor = async(req, res, next) => {
-    const { id } = req.params;
-    const camp = await Campground.findById(id);
-    if (!camp.author.equals(req.user._id)) {
-        req.flash('error', 'You do not have premission to do that 🖐🏻');
-        return res.redirect(`/campgrounds/${id}`);
+    const { id, reviewId } = req.params;
+    if(['/reviews/'].includes(req.originalUrl)){
+        const review = await Review.findById(reviewId);
+        if (!review.author.equals(req.user._id)) {
+            req.flash('error', 'You do not have premission to do that 🖐🏻');
+            return res.redirect(`/campgrounds/${id}`);
+        }
+    } else {
+        const camp = await Campground.findById(id);
+        if (!camp.author.equals(req.user._id)) {
+            req.flash('error', 'You do not have premission to do that 🖐🏻');
+            return res.redirect(`/campgrounds/${id}`);
+        }
     }
     next();
 }
