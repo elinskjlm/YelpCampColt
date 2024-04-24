@@ -29,7 +29,7 @@
         - [ ] Can submit new.
         - [ ] Can see Edit / Delete buttons.
 
-
+- [ ] Edit reviews
 
 ### UI
 
@@ -37,9 +37,24 @@
 
 - [ ] Option to decide whether navbar is stiky or fixed?.
 
+- [ ] In Show, when no reviews: Either center card, or fill with something else.
+
 ### Validation & Access control
 
 - [ ] Make sure that all & only needed routes are protected.
 
 - [ ] Validate image urls (new & edit).
     - [ ] Should at least not break (at least have one '/' in it).
+
+
+### Routes flow
+
+- [ ] Camp page -> Add new : 
+    - [ ] If logged in: => new -> (newly made)
+    - [ ] Else: => login (/signup!) -> (newly made)
+- [ ] Show page -> Add new : 
+    - [ ] If logged in: => new -> (newly made)
+    - [ ] Else: => login (/signup!) -> (newly made)
+- [ ] (Other pages -> Add new)
+    - [ ] If logged in: => new -> (newly made)
+    - [ ] Else: => login (/signup!) -> (newly made)
