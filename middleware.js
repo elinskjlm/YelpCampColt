@@ -20,7 +20,7 @@ module.exports.storeReturnTo = (req, res, next) => {
 
 module.exports.isAuthor = async(req, res, next) => {
     const { id, reviewId } = req.params;
-    if(['/reviews/'].includes(req.originalUrl)){
+    if(req.originalUrl.includes('/reviews')){
         const review = await Review.findById(reviewId);
         if (!review.author.equals(req.user._id)) {
             req.flash('error', 'You do not have premission to do that 🖐🏻');
