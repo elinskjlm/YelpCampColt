@@ -5,12 +5,14 @@ const catchAsync =          require('../utils/catchAsync');
 const passport =            require('passport');
 const router =              express.Router();
 
-router.get('/register', (req, res) => {
-    res.render('users/register')
-})
 router.get('/access', (req, res) => {
     res.render('users/access')
 })
+
+router.get('/register', (req, res) => {
+    res.render('users/register')
+})
+
 router.post('/register', copyDestination, catchAsync (async (req, res) => {
     try {
         const { email, username, password } = req.body;
@@ -20,8 +22,8 @@ router.post('/register', copyDestination, catchAsync (async (req, res) => {
             if (err) return next(err);
             req.flash('success', 'Welcome to Yelp Camp 🤷🏻‍♂️');
             const redirectUrl = res.locals.wishTo || '/';
-            delete req.session.wantsTo;
             delete res.locals.wishTo;
+            req.session.reviewDraft = res.locals.reviewDraft;
             res.redirect(redirectUrl);
         })
     } catch(e) {
@@ -37,6 +39,7 @@ router.get('/login', (req, res) => {
 router.post('/login', copyDestination, passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), (req, res) => {
     req.flash('success', 'Welcome back 🙄');
     const redirectUrl = res.locals.wishTo || '/';
+    delete res.locals.wishTo;
     req.session.reviewDraft = res.locals.reviewDraft;
     res.redirect(redirectUrl);
 })

@@ -70,7 +70,6 @@ const getPath = (refer => {
 
 module.exports.rememberDestination = (req, res, next) => {
     req.session.wishTo = req.originalUrl;
-    req.session.reviewDraft ||= req.body.review;
     next();
 
 }
