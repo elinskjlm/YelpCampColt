@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %>
+<div class="row mb-3">
+    <div class="col-5 border border-primary rounded mx-auto p-2">
+        <h1>Login</h1>
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="log-username">Username</label>
+                <input class="form-control" type="text" name="username" id="log-username" placeholder="username" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="log-password">Password</label>
+                <input class="form-control" type="password" name="password" id="log-password" placeholder="password" required>
+            </div>
+            <button class="btn btn-success">Login</button>
+        </form>
+    </div>
+    <div class="col-2 text-center mx-auto p-2">
+        <h1>OR</h1>
+    </div>
+    <div class="col-5 border border-primary rounded mx-auto p-2">
+        <h1>Register</h1>
+        <form action="/register" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="reg-username">Username</label>
+                <input class="form-control" type="text" name="username" id="reg-username" placeholder="username" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="reg-email">Email</label>
+                <input class="form-control" type="email" name="email" id="reg-email" placeholder="email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="reg-password">Password</label>
+                <input class="form-control" type="password" name="password" id="reg-password" placeholder="password" required>
+            </div>
+            <button class="btn btn-success">Register</button>
+        </form>
+</div>

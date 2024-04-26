@@ -8,6 +8,9 @@ const router =              express.Router();
 router.get('/register', saveInfoToSession, (req, res) => {
     res.render('users/register')
 })
+router.get('/access', (req, res) => {
+    res.render('users/access')
+})
 router.post('/register', copyToLocals, catchAsync (async (req, res) => {
     try {
         const { email, username, password } = req.body;
