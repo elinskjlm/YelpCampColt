@@ -12,7 +12,7 @@ const userRoutes =          require('./routes/users');
 const User =                require('./models/user');
 const passport =            require('passport');
 const LocalStrategy =       require('passport-local');
-const {tempFunc} = require('./middleware');
+// const {tempFunc} = require('./middleware');
 const app = express();
 const port = 3000;
 
