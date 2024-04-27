@@ -5,16 +5,19 @@ const passport =            require('passport');
 const users =               require('../controllers/users');
 const router =              express.Router();
 
-router.get('/access', users.renderAccessForms)
 
-router.get('/register', users.renderRegisterForm)
+router.get('/access', users.renderAccessForms);
 
-router.get('/login', users.renderLoginForm)
+router.route('/register')
+    .get(users.renderRegisterForm)
+    .post(copyDestination, catchAsync(users.registerNewUser));
 
-router.get('/logout', rememberOrigin, copyDestination, users.logoutUser)
+router.route('/login')
+    .get(users.renderLoginForm)
+    .post(copyDestination, 
+        passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), 
+        users.loginUser);
 
-router.post('/register', copyDestination, catchAsync(users.registerNewUser))
-
-router.post('/login', copyDestination, passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), users.loginUser)
+router.get('/logout', rememberOrigin, copyDestination, users.logoutUser);
 
 module.exports = router;
