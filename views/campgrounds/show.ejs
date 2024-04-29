@@ -5,7 +5,9 @@
   <!-- Campground -->
   <div class="col-md-6 mx-auto">
     <div class="card mb-3 mx-auto" style="width: 18rem;">
-      <img src=<%=campground.image ?? "#" %> class="card-img-top" alt="campground image">
+      <% for (let img of campground.images) { %>
+        <img src=<%= img.url ?? "#" %> class="card-img-top" alt="campground image">
+      <% } %>
       <div class="card-body">
         <h5 class="card-title">
           <%= campground.title %>
