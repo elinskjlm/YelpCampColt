@@ -10,16 +10,17 @@ const upload =          multer({ storage });
 
 router.route('/')
     .get(rememberDestination, catchAsync(campgrounds.index))
-    // TODO validation should be BEFORE uploading, but need adjustment first.
+    // TODO camp validation should be BEFORE uploading, but need adjustment first.
     .post(isLoggedIn, upload.array('image'), validateCampground, catchAsync(campgrounds.createCampground)); 
-
-router.get('/new', rememberDestination, isLoggedIn, catchAsync(campgrounds.renderNewForm));
-
-router.route('/:id')
+    
+    router.get('/new', rememberDestination, isLoggedIn, catchAsync(campgrounds.renderNewForm));
+    
+    router.route('/:id')
     .get(rememberDestination, catchAsync(campgrounds.renderCampground))
-    .put(isLoggedIn, isAuthor, validateCampground, catchAsync(campgrounds.editCampground))
+    // TODO camp validation should be BEFORE uploading, but need adjustment first.
+    .put(isLoggedIn, isAuthor, upload.array('image'), validateCampground, catchAsync(campgrounds.editCampground))
     .delete(isLoggedIn, isAuthor, catchAsync(campgrounds.deleteCampground));
-
-router.get('/:id/edit', rememberDestination, isLoggedIn, isAuthor, catchAsync(campgrounds.renderEditForm));
-
-module.exports = router;
+    
+    router.get('/:id/edit', rememberDestination, isLoggedIn, isAuthor, catchAsync(campgrounds.renderEditForm));
+    
+    module.exports = router;

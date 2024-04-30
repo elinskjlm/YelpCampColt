@@ -50,10 +50,12 @@ module.exports.renderEditForm = async (req, res) => {
 }
 
 module.exports.editCampground = async (req, res) => {
-    // TODO make sure image URL is valid, or at least contains "/" in it 
     const { id } = req.params;
-    const camp = await Campground.findById(id);
-    await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });
+    // Better TODO it all at once, instead of multiple calls.
+    const camp = await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });
+    const images = req.files.map(f => ({ url: f.path, filename: f.filename }));
+    camp.images.push(...images); 
+    camp.save();
     req.flash('success', 'Successfully updated campground 👍🏻');
     return res.redirect(`/campgrounds/${id}`);
 }
