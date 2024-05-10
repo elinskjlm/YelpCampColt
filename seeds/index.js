@@ -20,11 +20,12 @@ cleanDB();
 
 seedDB()
 .then(() => {
-     console.log('Seeding Done.');
+    console.log('Seeding Done.');
 })
 .catch(err => {
     console.log('Seeding Error: ', err);
 })
 .finally(() => {
     db.close();
+    console.log('Database Closed.');
 });
