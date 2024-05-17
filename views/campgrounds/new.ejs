@@ -1,25 +1,26 @@
 <% layout('layouts/boilerplate') %>
 
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.css' />
+    <link rel="stylesheet" href="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.css"
+        type="text/css" />
+
     <div class="row">
-        <h1 class="text-center">Add a new camp ground ⛺</h1>
-        <div class="col-6 offset-3">
+        <div class="col-md-6 col-lg-4 mx-auto">
+            <h1 class="text-center">Add a new camp ground ⛺</h1>
             <form action="/campgrounds" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
                 <div class="mb-3">
                     <label class="form-label" for="title">Name</label>
-                    <input class="form-control" type="text" name="campground[title]" id="title" placeholder="Name" required autofocus>
+                    <input class="form-control" type="text" name="campground[title]" id="title" placeholder="Name"
+                        required autofocus>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="price">Price</label>
                     <div class="input-group">
                         <span class="input-group-text">&#8362;</span>
-                        <input type="number" class="form-control" name="campground[price]" id="price" placeholder="Price"
-                            aria-label="Amount (to the nearest ILS)" required>
+                        <input type="number" class="form-control" name="campground[price]" id="price"
+                            placeholder="Price" aria-label="Amount (to the nearest ILS)" required>
                         <span class="input-group-text">.00</span>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="image" class="form-label">Add images</label>
-                    <input class="form-control" type="file" name="image" id="imageAdder" multiple>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="description">Description</label><br>
@@ -27,16 +28,50 @@
                         placeholder="Description" required></textarea>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label" for="map">Location</label>
+                    <div id="map" class="rounded mb-3" style="height: 300px;"></div>
+                    <div class="mb-3 border rounded p-2">
+                        <h5>Now pointing at:</h5>
+                        <p id="pointerName" class="text-muted"></p>
+                        <h5>Will be saved as:</h5>
+                        <p id="pointerCoords" class="text-muted"></p>
+                    </div>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Help me find the place 🕵🏻‍♂️
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body  border-info">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Place name" id="searchMapInput" aria-label="" aria-describedby="" novalidate>
+                                <button class="btn btn-outline-primary" type="button" id="searchMapButton">🔍</button>
+                            </div>
+                            <ul id="mapSearchResults" class="list-group border-0"></ul>
+                            <input class="form-control" type="text" name="campground[geojson]" id="geojson" placeholder="geojson" required hidden>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
                     <label class="form-label" for="city">City</label>
-                    <input class="form-control" type="text" name="campground[city]" id="city" placeholder="City" required>
+                    <input class="form-control" type="text" name="campground[city]" id="city" placeholder="City"
+                    required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="state">State</label>
-                    <input class="form-control" type="text" name="campground[state]" id="state" placeholder="State" required>
+                    <input class="form-control" type="text" name="campground[state]" id="state" placeholder="State"
+                        required>
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-success">Add new</button>
+                    <label for="image" class="form-label">Add images</label>
+                    <input class="form-control" type="file" name="image" id="imageAdder" multiple>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Add new</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.js'></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.min.js"></script>
+    <script src="/javascripts/new.js"></script>

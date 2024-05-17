@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Review = require('./review');
 const User = require('./user');
-const { array } = require('joi');
 const Schema = mongoose.Schema;
 
 const ImageSchema = new Schema({
@@ -20,12 +19,34 @@ ImageSchema.virtual('show').get(function() {
     return this.url.replace('/upload', '/upload/d_YelpCamp:fallbacks:fallBackImageGemini01_etskbd.jpg/b_black,c_pad,h_300,w_300/');
 })
 
+const FeatureSchema = new Schema({
+    bbox: { // TODO Should be virtual(??)
+        type: [Number],
+    },
+    geometry: {
+        coordinates: {
+            type: [Number],
+            required: true,
+        },
+        type: {
+            type: String,
+            enum: ['Point'],
+            required: true,
+        },
+    },
+    properties: {
+        address: Object,
+        display_name: String,
+        name: String,
+    },
+})
+
 const CampgroundSchema = new Schema({
     title: String,
     price: Number,
     images: [ImageSchema],
     description: String,
-    location: String,
+    geojson: FeatureSchema,
     city: String,
     state: String,
     author: {

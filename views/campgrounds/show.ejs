@@ -1,118 +1,132 @@
 <% layout('layouts/boilerplate') %>
-<link rel="stylesheet" href="/stylesheets/stars.css">
+  <link rel="stylesheet" href="/stylesheets/stars.css">
 
-<div class="row">
-  <!-- Campground -->
+  <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.css' />
+  <link rel="stylesheet" href="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.css"
+    type="text/css" />
 
-  <div class="col-md-6 col-lg-4 mx-auto">
-    <div class="card mb-3 mx-auto">
-      <div id="campgroundCarousel" class="carousel slide">
-        <div class="carousel-inner">
-          <% campground.images.forEach((img, i) => { %>
-            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
-              <img src=<%= campground.images[i].show %> alt="campground image" class="d-block w-100">
-            </div>
-          <% }) %>
-          <% if (campground.images.length > 1) { %>
-            <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          <% } %>
-        </div>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">
-          <%= campground.title %>
-        </h5>
-        <p class="card-text">
-          <%= campground.description %>
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted">📍 <%= campground.city %>, <%= campground.state %>
-        </li>
-        <li class="list-group-item">🫰🏻 &#8362;<%= campground.price %> / Night</li>
-        <li class="list-group-item">🙎🏻‍♂️ <%= campground.author.username %></li>
-      </ul>
-      <% if (currentUser && campground.author.equals(currentUser._id)) { %>
-        <div class="card-body">
-          <a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit 🖍️</a>
-          <form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-danger">Delete 🗑️</button>
-          </form>
+  <div class="row">
+    <!-- Campground -->
+
+    <div class="col-md-6 col-lg-4 mx-auto">
+      <div class="card mb-3 mx-auto">
+        <div id="campgroundCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <% campground.images.forEach((img, i)=> { %>
+              <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                <img src=<%=campground.images[i].show %> alt="campground image" class="d-block w-100">
+              </div>
+            <% }) %>
+            <% if (campground.images.length> 1) { %>
+              <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            <% } %>
+          </div>
         </div>
         <div class="card-body">
-          <div class="mb-3">
-            <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
-              <label for="image" class="form-label">Add images</label>
-              <input class="form-control" type="file" name="image" id="imageAdder" multiple>
-              <button class="btn btn-info disabled" id="buttonAddImages">Add images</button>
+          <h5 class="card-title">
+            <%= campground.title %>
+          </h5>
+          <p class="card-text">
+            <%= campground.description %>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">📍 <%= campground.city %>, <%= campground.state %></li>
+          <li class="list-group-item">🫰🏻 &#8362;<%= campground.price %> / Night</li>
+          <li class="list-group-item">🙎🏻‍♂️ <%= campground.author.username %></li>
+        </ul>
+        <% if (currentUser && campground.author.equals(currentUser._id)) { %>
+          <div class="card-body">
+            <a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit 🖍️</a>
+            <form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+              <button class="btn btn-danger">Delete 🗑️</button>
             </form>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                <label for="image" class="form-label">Add images</label>
+                <input class="form-control" type="file" name="image" id="imageAdder" multiple>
+                <button class="btn btn-info disabled" id="buttonAddImages">Add images</button>
+              </form>
+            </div>
+          </div>
+        <% } %>
+        <div class="card-footer text-muted">
+          <a href="/campgrounds" class="card-link">Back to main 🏠</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews and Map -->
+    <!-- Map -->
+    <div class="col-md-6 col-lg-4 mx-auto">
+      <div id="map" class="rounded mb-3" style="height: 300px;"></div>
+      <!-- Adding New Review -->
+      <div class="mb-3 border border-primary rounded p-2">
+        <h2>Leave a review 🤓</h2>
+        <form action="/campgrounds/<%= campground._id %>/reviews" method="post" class="mb-3 needs-validation" novalidate>
+          <div>
+            <fieldset class="starability-basic">
+              <!-- <legend>First rating:</legend> -->
+              <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]"value="<% if(reviewDraft){  %><%=reviewDraft.rating %><% } else { "0" } %>" checked aria-label="No rating." />
+              <input type="radio" id="first-rate1" name="review[rating]" value="1" <% if(reviewDraft?.rating >= 1){ %> checked <% }%>/>
+              <label for="first-rate1" title="Terrible">1 star</label>
+              <input type="radio" id="first-rate2" name="review[rating]" value="2" <% if(reviewDraft?.rating >= 2){ %> checked <% }%>/>
+              <label for="first-rate2" title="Not good">2 stars</label>
+              <input type="radio" id="first-rate3" name="review[rating]" value="3" <% if(reviewDraft?.rating >= 3){ %> checked <% }%>/>
+              <label for="first-rate3" title="Average">3 stars</label>
+              <input type="radio" id="first-rate4" name="review[rating]" value="4" <% if(reviewDraft?.rating >= 4){ %> checked <% }%>/>
+              <label for="first-rate4" title="Very good">4 stars</label>
+              <input type="radio" id="first-rate5" name="review[rating]" value="5" <% if(reviewDraft?.rating >= 5){ %> checked <% }%>/>
+              <label for="first-rate5" title="Amazing">5 stars</label>
+            </fieldset>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="reviewBody">Review Text:</label>
+            <textarea class="form-control" name="review[body]" id="reviewBody" cols="30" rows="3" required><% if(reviewDraft){  %><%= reviewDraft.body %><% } %></textarea>
+            <div class="valid-feedback">
+              As long as it's not empty 🤷🏻‍♂️
+            </div>
+            <div class="invalid-feedback">
+              Just not empty ☝🏻
+            </div>
+          </div>
+          <button class="btn btn-success" type="submit">Post review</button>
+        </form>
+      </div>
+      <!-- Showing Existing -->
+      <% for (let review of campground.reviews) { %>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= review.author.username %>:</h5>
+            <p class="starability-result" data-rating=<%= review.rating %>>
+              Rated: <%= review.rating %> stars
+            </p>
+            <p class="card-text">"<%= review.body %>"</p>
+            <% if (currentUser?.equals(review.author)) { %>
+              <form action="/campgrounds/<%= campground._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            <% } %>
           </div>
         </div>
       <% } %>
-      <div class="card-footer text-muted">
-        <a href="/campgrounds" class="card-link">Back to main 🏠</a>
-      </div>
     </div>
   </div>
 
-  <!-- Reviews -->
-  <!-- Adding New -->
-  <div class="col-md-6 col-lg-4 mx-auto">
-    <div class="mb-3 border border-primary rounded p-2">
-      <h2>Leave a review 🤓</h2>
-      <form action="/campgrounds/<%= campground._id %>/reviews" method="post" class="mb-3 needs-validation" novalidate>
-        <div>
-          <fieldset class="starability-basic">
-            <!-- <legend>First rating:</legend> -->
-            <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="<% if(reviewDraft){  %><%=reviewDraft.rating %><% } else { "0" } %>" checked aria-label="No rating." />
-            <input type="radio" id="first-rate1" name="review[rating]" value="1" <% if(reviewDraft?.rating >= 1){  %> checked <% }%>/>
-            <label for="first-rate1" title="Terrible">1 star</label>
-            <input type="radio" id="first-rate2" name="review[rating]" value="2" <% if(reviewDraft?.rating >= 2){  %> checked <% }%>/>
-            <label for="first-rate2" title="Not good">2 stars</label>
-            <input type="radio" id="first-rate3" name="review[rating]" value="3" <% if(reviewDraft?.rating >= 3){  %> checked <% }%>/>
-            <label for="first-rate3" title="Average">3 stars</label>
-            <input type="radio" id="first-rate4" name="review[rating]" value="4" <% if(reviewDraft?.rating >= 4){  %> checked <% }%>/>
-            <label for="first-rate4" title="Very good">4 stars</label>
-            <input type="radio" id="first-rate5" name="review[rating]" value="5" <% if(reviewDraft?.rating >= 5){  %> checked <% }%>/>
-            <label for="first-rate5" title="Amazing">5 stars</label>
-          </fieldset>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="reviewBody">Review Text:</label>
-          <textarea class="form-control" name="review[body]" id="reviewBody" cols="30" rows="3" required><% if(reviewDraft){  %><%= reviewDraft.body %><% } %></textarea>
-          <div class="valid-feedback">
-            As long as it's not empty 🤷🏻‍♂️
-          </div>
-          <div class="invalid-feedback">
-            Just not empty ☝🏻
-          </div>
-        </div>
-        <button class="btn btn-success" type="submit">Post review</button>
-      </form>
-    </div>
-    <!-- Showing Existing -->
-    <% for (let review of campground.reviews) { %>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title"><%= review.author.username %>:</h5>
-          <p class="starability-result" data-rating=<%= review.rating %>>
-            Rated: <%= review.rating %> stars
-          </p>
-          <p class="card-text">"<%= review.body %>"</p>
-          <% if (currentUser?.equals(review.author)) { %>
-          <form action="/campgrounds/<%= campground._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-danger">Delete</button>
-          </form>
-          <% } %>
-        </div>
-      </div>
-    <% } %>
-  </div>
-</div>
+  <script>
+    const feature = '<%- JSON.stringify(campground.geojson) %>';
+  </script>
+
+
+  <script src='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.js'></script>
+  <script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.min.js"></script>
+  <script src="/javascripts/show.js"></script>

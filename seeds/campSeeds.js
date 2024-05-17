@@ -1,23 +1,6 @@
+const review = require("../models/review");
+
 module.exports = [
-    {
-        "title": "White Oak Camp",
-        "price": "550",
-        "description": "Beautiful, calming",
-        "location": "35.45N, 35.45E",
-        "city": "Nicosia",
-        "state": "Cyprus",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
     {
         "title": "Tranquil Creek",
         "price": "480",
@@ -25,871 +8,983 @@ module.exports = [
         "location": "41.29N, 78.87W",
         "city": "DuBois",
         "state": "Pennsylvania",
-        "author": "6622a8772a8e78e059d6c60e",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-78.737724, 41.124184, -78.7265119, 41.1319997],
+            "geometry": {
+                "coordinates": [41.131595660217755, -78.73060451881925],
+                "type": 'Point'
+            },
+            "properties": {
+                "address": {
+                    "road": 'Industrial Drive',
+                    "hamlet": 'Shaffer',
+                    "city": 'Sandy Township',
+                    "county": 'Clearfield County',
+                    "state": 'Pennsylvania',
+                    "ISO3166-2-lvl4": 'US-PA',
+                    "postcode": '15801',
+                    "country": 'United States',
+                    "country_code": 'us'
+                },
+                "display_name": 'Industrial Drive, Shaffer, Sandy Township, Clearfield County, Pennsylvania, 15801, United States',
+                "name": 'Industrial Drive'
+            },
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": [],
     },
     {
-        "title": "Redwood Retreat",
-        "price": "720",
-        "description": "Stunning redwoods, hiking trails",
-        "location": "37.97N, 122.50W",
-        "city": "Mill Valley",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Sunny Meadows",
+        "price": "350",
+        "description": "Open fields, ideal for picnics and outdoor games",
+        "location": "41.05N, 78.61W",
+        "city": "Clearfield",
+        "state": "Pennsylvania",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-78.623521, 41.041295, -78.611987, 41.052837],
+            "geometry": {
+                "coordinates": [41.048563, -78.617654],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Country Lane",
+                    "village": "Glen Richey",
+                    "city": "Clearfield",
+                    "county": "Clearfield County",
+                    "state": "Pennsylvania",
+                    "ISO3166-2-lvl4": "US-PA",
+                    "postcode": "16830",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Country Lane, Glen Richey, Clearfield, Clearfield County, Pennsylvania, 16830, United States",
+                "name": "Country Lane"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Horizon View",
-        "price": "600",
-        "description": "Breathtaking mountain views",
-        "location": "40.64N, 111.80W",
-        "city": "Salt Lake City",
-        "state": "Utah",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Whispering Pines",
+        "price": "560",
+        "description": "Dense forests, perfect for hiking and birdwatching",
+        "location": "41.15N, 78.50W",
+        "city": "Clearfield",
+        "state": "Pennsylvania",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-78.515471, 41.141623, -78.503257, 41.154345],
+            "geometry": {
+                "coordinates": [41.148390, -78.509364],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Forest Path",
+                    "hamlet": "West Decatur",
+                    "city": "Clearfield",
+                    "county": "Clearfield County",
+                    "state": "Pennsylvania",
+                    "ISO3166-2-lvl4": "US-PA",
+                    "postcode": "16878",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Forest Path, West Decatur, Clearfield, Clearfield County, Pennsylvania, 16878, United States",
+                "name": "Forest Path"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Lakeside Escape",
-        "price": "390",
-        "description": "Peaceful lakefront setting",
-        "location": "42.35N, 83.04W",
-        "city": "Detroit",
-        "state": "Michigan",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Crystal Lake",
+        "price": "620",
+        "description": "Lakeside retreat, great for fishing and kayaking",
+        "location": "41.38N, 78.65W",
+        "city": "St. Marys",
+        "state": "Pennsylvania",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-78.667815, 41.370629, -78.655542, 41.384293],
+            "geometry": {
+                "coordinates": [41.378151, -78.661679],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Lakeside Drive",
+                    "village": "Kaulmont",
+                    "city": "St. Marys",
+                    "county": "Elk County",
+                    "state": "Pennsylvania",
+                    "ISO3166-2-lvl4": "US-PA",
+                    "postcode": "15857",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Lakeside Drive, Kaulmont, St. Marys, Elk County, Pennsylvania, 15857, United States",
+                "name": "Lakeside Drive"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Stargazer's Paradise",
-        "price": "850",
-        "description": "Uninterrupted night sky views",
-        "location": "30.21N, -110.88W",
-        "city": "Hermosillo",
-        "state": "Mexico",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Mountain Haven",
+        "price": "700",
+        "description": "Serene mountain cabin, perfect for hiking and stargazing",
+        "location": "35.56N, 83.51W",
+        "city": "Gatlinburg",
+        "state": "Tennessee",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-83.526731, 35.540103, -83.513217, 35.570897],
+            "geometry": {
+                "coordinates": [35.556124, -83.519435],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Smoky Mountain Trail",
+                    "village": "Gatlinburg",
+                    "county": "Sevier County",
+                    "state": "Tennessee",
+                    "ISO3166-2-lvl4": "US-TN",
+                    "postcode": "37738",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Smoky Mountain Trail, Gatlinburg, Sevier County, Tennessee, 37738, United States",
+                "name": "Smoky Mountain Trail"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Cozy Cabin Getaway",
-        "price": "420",
-        "description": "Romantic fireplace, private setting",
-        "location": "44.39N, 73.22W",
-        "city": "Plattsburgh",
-        "state": "New York",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Desert Adventure Camp",
-        "price": "650",
-        "description": "Unique desert landscape, outdoor activities",
-        "location": "36.12N, -114.19W",
+        "title": "Desert Oasis",
+        "price": "480",
+        "description": "Isolated desert spot, perfect for off-grid living and stargazing",
+        "location": "36.12N, 115.17W",
         "city": "Las Vegas",
         "state": "Nevada",
-        "author": "6622a8772a8e78e059d6c60e",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-115.181231, 36.113091, -115.160938, 36.127472],
+            "geometry": {
+                "coordinates": [36.120543, -115.171894],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Desert Road",
+                    "city": "Las Vegas",
+                    "county": "Clark County",
+                    "state": "Nevada",
+                    "ISO3166-2-lvl4": "US-NV",
+                    "postcode": "89123",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Desert Road, Las Vegas, Clark County, Nevada, 89123, United States",
+                "name": "Desert Road"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Oceanfront Oasis",
-        "price": "900",
-        "description": "Direct beach access, water sports",
-        "location": "25.76N, -80.19W",
-        "city": "Miami",
-        "state": "Florida",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Coastal Paradise",
+        "price": "850",
+        "description": "Beachfront site, ideal for surfing and sunbathing",
+        "location": "33.77S, 151.29E",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [151.278, -33.789, 151.307, -33.761],
+            "geometry": {
+                "coordinates": [-33.7764, 151.2937],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Beachfront Avenue",
+                    "suburb": "Bondi",
+                    "city": "Sydney",
+                    "county": "Waverley Council",
+                    "state": "New South Wales",
+                    "ISO3166-2-lvl4": "AU-NSW",
+                    "postcode": "2026",
+                    "country": "Australia",
+                    "country_code": "au"
+                },
+                "display_name": "Beachfront Avenue, Bondi, Sydney, Waverley Council, New South Wales, 2026, Australia",
+                "name": "Beachfront Avenue"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Jungle Explorer's Base",
-        "price": "780",
-        "description": "Immerse yourself in the rainforest",
-        "location": "-2.57S, -56.47W",
-        "city": "Manaus",
-        "state": "Brazil",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Mountain Majesty",
-        "price": "700",
-        "description": "Majestic peaks, serene environment",
-        "location": "39.33N, 106.11W",
-        "city": "Aspen",
-        "state": "Colorado",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Riverside Haven",
-        "price": "550",
-        "description": "Tranquil riverside setting",
-        "location": "47.68N, 117.42W",
-        "city": "Spokane",
-        "state": "Washington",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Wildflower Meadow",
-        "price": "480",
-        "description": "Colorful blooms, scenic views",
-        "location": "44.69N, 110.52W",
-        "city": "Yellowstone National Park",
-        "state": "Wyoming",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Sunset Point",
-        "price": "620",
-        "description": "Spectacular sunset vistas",
-        "location": "36.57N, 118.75W",
-        "city": "Lone Pine",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Serenity Woods",
-        "price": "420",
-        "description": "Tranquil forest retreat",
-        "location": "43.91N, 114.65W",
-        "city": "Sun Valley",
-        "state": "Idaho",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Island Paradise",
-        "price": "880",
-        "description": "Secluded island getaway",
-        "location": "20.52N, 169.28W",
-        "city": "Honolulu",
-        "state": "Hawaii",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Alpine Refuge",
-        "price": "670",
-        "description": "High-altitude escape",
-        "location": "45.28N, 121.68W",
-        "city": "Mount Hood",
-        "state": "Oregon",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Hidden Gem",
-        "price": "590",
-        "description": "Off-the-beaten-path discovery",
-        "location": "35.72N, 118.68W",
-        "city": "Ridgecrest",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Canyon Retreat",
-        "price": "730",
-        "description": "Scenic canyon views, hiking trails",
-        "location": "36.05N, 112.14W",
-        "city": "Grand Canyon Village",
-        "state": "Arizona",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Enchanted Forest",
-        "price": "510",
-        "description": "Magical woodland experience",
-        "location": "44.02N, 71.37W",
-        "city": "North Conway",
-        "state": "New Hampshire",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Tranquil Valley",
-        "price": "450",
-        "description": "Secluded valley escape",
-        "location": "38.88N, 109.74W",
-        "city": "Moab",
-        "state": "Utah",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Oceanfront Escape",
-        "price": "820",
-        "description": "Relaxing beachfront setting",
-        "location": "28.39N, -80.60W",
-        "city": "Cape Canaveral",
-        "state": "Florida",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Secluded Meadow",
-        "price": "380",
-        "description": "Peaceful meadow retreat",
-        "location": "42.01N, 87.97W",
-        "city": "Chicago",
-        "state": "Illinois",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Stargazer's Ridge",
-        "price": "690",
-        "description": "Unobstructed night sky views",
-        "location": "31.47N, -109.05W",
-        "city": "Douglas",
-        "state": "Arizona",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Lakeside Serenity",
-        "price": "520",
-        "description": "Calming lakefront experience",
-        "location": "41.60N, 78.58W",
-        "city": "Emporium",
-        "state": "Pennsylvania",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Desert Serenity",
-        "price": "580",
-        "description": "Tranquil desert landscape",
-        "location": "32.82N, -111.65W",
-        "city": "Casa Grande",
-        "state": "Arizona",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Mountain View Retreat",
-        "price": "800",
-        "description": "Breathtaking mountain vistas",
-        "location": "40.13N, 105.52W",
-        "city": "Boulder",
-        "state": "Colorado",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Secluded Beach",
+        "title": "Arctic Retreat",
         "price": "950",
-        "description": "Private beach access, relaxation",
-        "location": "21.24N, -157.91W",
-        "city": "Honolulu",
-        "state": "Hawaii",
-        "author": "6622a8772a8e78e059d6c60e",
+        "description": "Remote location, great for viewing the Northern Lights",
+        "location": "64.13N, 21.90W",
+        "city": "Reykjavik",
+        "state": "",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-21.920, 64.110, -21.880, 64.150],
+            "geometry": {
+                "coordinates": [64.1305, -21.9023],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Aurora Street",
+                    "suburb": "Mosfellsbær",
+                    "city": "Reykjavik",
+                    "county": "Höfuðborgarsvæðið",
+                    "postcode": "270",
+                    "country": "Iceland",
+                    "country_code": "is"
+                },
+                "display_name": "Aurora Street, Mosfellsbær, Reykjavik, Höfuðborgarsvæðið, 270, Iceland",
+                "name": "Aurora Street"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Forest Escape",
-        "price": "490",
-        "description": "Immerse yourself in the woods",
-        "location": "45.34N, 72.89W",
-        "city": "Jay",
-        "state": "Vermont",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Amazon Jungle Camp",
+        "price": "420",
+        "description": "Deep in the jungle, ideal for adventure and wildlife",
+        "location": "-3.47S, -62.22W",
+        "city": "Manaus",
+        "state": "Amazonas",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-62.235, -3.485, -62.205, -3.455],
+            "geometry": {
+                "coordinates": [-3.4702, -62.2198],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Jungle Path",
+                    "village": "Novo Airão",
+                    "city": "Manaus",
+                    "county": "Amazonas",
+                    "state": "Amazonas",
+                    "postcode": "69730-000",
+                    "country": "Brazil",
+                    "country_code": "br"
+                },
+                "display_name": "Jungle Path, Novo Airão, Manaus, Amazonas, 69730-000, Brazil",
+                "name": "Jungle Path"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Tranquil Bay",
-        "price": "750",
-        "description": "Secluded bay setting, water activities",
-        "location": "34.21N, -118.11W",
-        "city": "Malibu",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Safari Lodge",
+        "price": "980",
+        "description": "Luxury safari experience, perfect for wildlife photography",
+        "location": "-1.37S, 35.65E",
+        "city": "Maasai Mara",
+        "state": "Narok County",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [35.635, -1.385, 35.665, -1.355],
+            "geometry": {
+                "coordinates": [-1.3701, 35.6504],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Safari Trail",
+                    "village": "Talek",
+                    "city": "Maasai Mara",
+                    "county": "Narok County",
+                    "postcode": "20500",
+                    "country": "Kenya",
+                    "country_code": "ke"
+                },
+                "display_name": "Safari Trail, Talek, Maasai Mara, Narok County, 20500, Kenya",
+                "name": "Safari Trail"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Camping Adventure",
-        "price": "360",
-        "description": "Back-to-nature experience",
-        "location": "44.98N, 75.47W",
-        "city": "Ogdensburg",
-        "state": "New York",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Swiss Chalet",
+        "price": "1200",
+        "description": "Mountain chalet, perfect for skiing and winter sports",
+        "location": "46.49N, 7.68E",
+        "city": "Interlaken",
+        "state": "Bern",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [7.660, 46.480, 7.700, 46.500],
+            "geometry": {
+                "coordinates": [46.4902, 7.6801],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Chalet Road",
+                    "village": "Matten",
+                    "city": "Interlaken",
+                    "county": "Interlaken-Oberhasli",
+                    "state": "Bern",
+                    "postcode": "3800",
+                    "country": "Switzerland",
+                    "country_code": "ch"
+                },
+                "display_name": "Chalet Road, Matten, Interlaken, Interlaken-Oberhasli, Bern, 3800, Switzerland",
+                "name": "Chalet Road"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Tropical Paradise",
-        "price": "920",
-        "description": "Luxurious island getaway",
-        "location": "18.11N, -140.88W",
-        "city": "Honolulu",
-        "state": "Hawaii",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Tropical Hideaway",
+        "price": "680",
+        "description": "Secluded beach bungalow, great for snorkeling and relaxing",
+        "location": "14.60N, 120.97E",
+        "city": "El Nido",
+        "state": "Palawan",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [120.960, 14.590, 120.980, 14.610],
+            "geometry": {
+                "coordinates": [14.6003, 120.9701],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Bungalow Lane",
+                    "village": "Corong-Corong",
+                    "city": "El Nido",
+                    "county": "Palawan",
+                    "state": "Palawan",
+                    "postcode": "5313",
+                    "country": "Philippines",
+                    "country_code": "ph"
+                },
+                "display_name": "Bungalow Lane, Corong-Corong, El Nido, Palawan, 5313, Philippines",
+                "name": "Bungalow Lane"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Secluded Cabin",
-        "price": "400",
-        "description": "Rustic charm, off-the-grid",
-        "location": "46.21N, 68.91W",
-        "city": "Presque Isle",
-        "state": "Maine",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Treetop Haven",
-        "price": "890",
-        "description": "Unique treehouse experience",
-        "location": "38.51N, -122.72W",
-        "city": "Napa",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Lakeside Camp",
+        "title": "Scottish Highlands Retreat",
         "price": "530",
-        "description": "Fun-filled lakeside activities",
-        "location": "40.30N, 80.23W",
-        "city": "Wheeling",
-        "state": "West Virginia",
-        "author": "6622a8772a8e78e059d6c60e",
+        "description": "Rustic cabin, great for hiking and exploring",
+        "location": "57.48N, 4.23W",
+        "city": "Inverness",
+        "state": "Scotland",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-4.240, 57.470, -4.220, 57.490],
+            "geometry": {
+                "coordinates": [57.4801, -4.2302],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Highland Trail",
+                    "village": "Lochend",
+                    "city": "Inverness",
+                    "county": "Highland",
+                    "state": "Scotland",
+                    "postcode": "IV3",
+                    "country": "United Kingdom",
+                    "country_code": "gb"
+                },
+                "display_name": "Highland Trail, Lochend, Inverness, Highland, IV3, United Kingdom",
+                "name": "Highland Trail"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Hidden Waterfall",
-        "price": "640",
-        "description": "Secluded waterfall discovery",
-        "location": "37.34N, 112.40W",
-        "city": "Springdale",
-        "state": "Utah",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Mediterranean Escape",
+        "price": "750",
+        "description": "Seaside villa, perfect for sunbathing and dining",
+        "location": "37.98N, 23.73E",
+        "city": "Athens",
+        "state": "Attica",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [23.720, 37.970, 23.740, 37.990],
+            "geometry": {
+                "coordinates": [37.9802, 23.7301],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Villa Lane",
+                    "suburb": "Vouliagmeni",
+                    "city": "Athens",
+                    "county": "Central Athens",
+                    "state": "Attica",
+                    "postcode": "16671",
+                    "country": "Greece",
+                    "country_code": "gr"
+                },
+                "display_name": "Villa Lane, Vouliagmeni, Athens, Central Athens, Attica, 16671, Greece",
+                "name": "Villa Lane"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Camping Getaway",
-        "price": "390",
-        "description": "Affordable adventure in nature",
-        "location": "43.12N, 76.78W",
-        "city": "Syracuse",
-        "state": "New York",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Azure Lake Retreat",
-        "price": "780",
-        "description": "Crystal clear waters, peaceful surroundings",
-        "location": "48.51N, 122.65W",
-        "city": "Bellingham",
-        "state": "Washington",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Golden Valley Camp",
-        "price": "640",
-        "description": "Idyllic valley setting, abundant wildlife",
-        "location": "36.97N, 121.91W",
-        "city": "Salinas",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Pine Ridge Hideaway",
-        "price": "550",
-        "description": "Secluded pine forest getaway",
-        "location": "43.93N, 102.53W",
-        "city": "Rapid City",
-        "state": "South Dakota",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Tranquil Pond Refuge",
-        "price": "490",
-        "description": "Peaceful pondside retreat",
-        "location": "43.85N, 73.43W",
-        "city": "Wilmington",
-        "state": "New York",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Mystic Cove",
-        "price": "720",
-        "description": "Enchanting coastal cove, marine life",
-        "location": "34.41N, 119.69W",
-        "city": "Santa Barbara",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Echoing Peaks Camp",
-        "price": "670",
-        "description": "Echoing mountain vistas, hiking trails",
-        "location": "48.68N, 113.65W",
-        "city": "Kalispell",
-        "state": "Montana",
-        "author": "6622a8772a8e78e059d6c60e",
-        "images": [
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            },
-            {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
-            }
-        ]
-    },
-    {
-        "title": "Moonlit Meadow",
+        "title": "Alaskan Wilderness",
         "price": "600",
-        "description": "Magical moonlit landscape",
-        "location": "41.28N, 74.69W",
-        "city": "Warwick",
-        "state": "New York",
-        "author": "6622a8772a8e78e059d6c60e",
+        "description": "Cabin in the wild, ideal for fishing and hiking",
+        "location": "64.84N, 147.72W",
+        "city": "Fairbanks",
+        "state": "Alaska",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-147.730, 64.830, -147.710, 64.850],
+            "geometry": {
+                "coordinates": [64.8401, -147.7203],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Wilderness Road",
+                    "village": "Chena Ridge",
+                    "city": "Fairbanks",
+                    "county": "Fairbanks North Star",
+                    "state": "Alaska",
+                    "postcode": "99709",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Wilderness Road, Chena Ridge, Fairbanks, Fairbanks North Star, Alaska, 99709, United States",
+                "name": "Wilderness Road"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Whispering Woods",
-        "price": "520",
-        "description": "Gentle breeze, rustling leaves",
-        "location": "38.88N, 77.03W",
-        "city": "Reston",
-        "state": "Virginia",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "French Countryside Cottage",
+        "price": "670",
+        "description": "Cozy cottage, ideal for wine tasting and cycling",
+        "location": "48.94N, 2.10E",
+        "city": "Versailles",
+        "state": "Île-de-France",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [2.090, 48.930, 2.110, 48.950],
+            "geometry": {
+                "coordinates": [48.9402, 2.1003],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Countryside Road",
+                    "village": "Le Chesnay",
+                    "city": "Versailles",
+                    "county": "Yvelines",
+                    "state": "Île-de-France",
+                    "postcode": "78150",
+                    "country": "France",
+                    "country_code": "fr"
+                },
+                "display_name": "Countryside Road, Le Chesnay, Versailles, Yvelines, Île-de-France, 78150, France",
+                "name": "Countryside Road"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Peaceful Pines",
-        "price": "570",
-        "description": "Serenity beneath towering pines",
-        "location": "36.48N, 118.56W",
-        "city": "Three Rivers",
-        "state": "California",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Japanese Ryokan",
+        "price": "740",
+        "description": "Traditional inn, perfect for cultural experiences and relaxation",
+        "location": "35.02N, 135.75E",
+        "city": "Kyoto",
+        "state": "Kyoto Prefecture",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [135.740, 35.010, 135.760, 35.030],
+            "geometry": {
+                "coordinates": [35.0201, 135.7503],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Ryokan Street",
+                    "district": "Higashiyama",
+                    "city": "Kyoto",
+                    "county": "Kyoto Prefecture",
+                    "postcode": "605-0821",
+                    "country": "Japan",
+                    "country_code": "jp"
+                },
+                "display_name": "Ryokan Street, Higashiyama, Kyoto, Kyoto Prefecture, 605-0821, Japan",
+                "name": "Ryokan Street"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
+        ],
+        "reviews": []
     },
     {
-        "title": "Sunrise Shores",
-        "price": "690",
-        "description": "Stunning sunrise views over the ocean",
-        "location": "39.27N, 74.58W",
-        "city": "Ocean City",
-        "state": "New Jersey",
-        "author": "6622a8772a8e78e059d6c60e",
+        "title": "Canadian Rockies Lodge",
+        "price": "800",
+        "description": "Mountain lodge, perfect for skiing and wildlife",
+        "location": "51.18N, 115.57W",
+        "city": "Banff",
+        "state": "Alberta",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-115.580, 51.170, -115.560, 51.190],
+            "geometry": {
+                "coordinates": [51.1801, -115.5702],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Rockies Road",
+                    "village": "Lake Louise",
+                    "city": "Banff",
+                    "county": "Improvement District No. 9",
+                    "state": "Alberta",
+                    "postcode": "T0L 1E0",
+                    "country": "Canada",
+                    "country_code": "ca"
+                },
+                "display_name": "Rockies Road, Lake Louise, Banff, Improvement District No. 9, Alberta, T0L 1E0, Canada",
+                "name": "Rockies Road"
+            }
+        },
         "images": [
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
             },
             {
-                url: 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714402243/YelpCamp/r7ttftctulcmzyon3v9h.png',
-                filename: 'YelpCamp/r7ttftctulcmzyon3v9h',
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
             }
-        ]
-    }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "New Zealand Bay",
+        "price": "650",
+        "description": "Seaside retreat, perfect for kayaking and whale watching",
+        "location": "35.28S, 174.09E",
+        "city": "Paihia",
+        "state": "Northland",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [174.080, -35.290, 174.100, -35.270],
+            "geometry": {
+                "coordinates": [-35.2801, 174.0902],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Bay Road",
+                    "village": "Russell",
+                    "city": "Paihia",
+                    "county": "Far North",
+                    "state": "Northland",
+                    "postcode": "0200",
+                    "country": "New Zealand",
+                    "country_code": "nz"
+                },
+                "display_name": "Bay Road, Russell, Paihia, Far North, Northland, 0200, New Zealand",
+                "name": "Bay Road"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "African Desert Camp",
+        "price": "550",
+        "description": "Remote desert camp, perfect for camel rides and stargazing",
+        "location": "23.41S, 13.08E",
+        "city": "Swakopmund",
+        "state": "Erongo",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [13.070, -23.420, 13.090, -23.400],
+            "geometry": {
+                "coordinates": [-23.4101, 13.0802],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Desert Road",
+                    "village": "Mondesa",
+                    "city": "Swakopmund",
+                    "county": "Erongo",
+                    "state": "Erongo",
+                    "postcode": "9000",
+                    "country": "Namibia",
+                    "country_code": "na"
+                },
+                "display_name": "Desert Road, Mondesa, Swakopmund, Erongo, 9000, Namibia",
+                "name": "Desert Road"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Amazon Rainforest Lodge",
+        "price": "700",
+        "description": "Eco-lodge, great for wildlife spotting and jungle tours",
+        "location": "3.47S, 60.02W",
+        "city": "Manaus",
+        "state": "Amazonas",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-60.030, -3.480, -60.010, -3.460],
+            "geometry": {
+                "coordinates": [-3.4701, -60.0202],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Rainforest Road",
+                    "village": "Puraquequara",
+                    "city": "Manaus",
+                    "county": "Manaus",
+                    "state": "Amazonas",
+                    "postcode": "69000-000",
+                    "country": "Brazil",
+                    "country_code": "br"
+                },
+                "display_name": "Rainforest Road, Puraquequara, Manaus, Manaus, Amazonas, 69000-000, Brazil",
+                "name": "Rainforest Road"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Australian Outback Station",
+        "price": "480",
+        "description": "Remote station, ideal for outback adventures and wildlife",
+        "location": "23.70S, 133.87E",
+        "city": "Alice Springs",
+        "state": "Northern Territory",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [133.860, -23.710, 133.880, -23.690],
+            "geometry": {
+                "coordinates": [-23.7001, 133.8702],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Outback Road",
+                    "village": "Ross",
+                    "city": "Alice Springs",
+                    "county": "MacDonnell",
+                    "state": "Northern Territory",
+                    "postcode": "0870",
+                    "country": "Australia",
+                    "country_code": "au"
+                },
+                "display_name": "Outback Road, Ross, Alice Springs, MacDonnell, Northern Territory, 0870, Australia",
+                "name": "Outback Road"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Hawaiian Paradise",
+        "price": "900",
+        "description": "Beachfront house, perfect for surfing and sunsets",
+        "location": "19.43N, 155.90W",
+        "city": "Kailua-Kona",
+        "state": "Hawaii",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-155.910, 19.420, -155.890, 19.440],
+            "geometry": {
+                "coordinates": [19.4301, -155.9002],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Paradise Road",
+                    "village": "Holualoa",
+                    "city": "Kailua-Kona",
+                    "county": "Hawaii County",
+                    "state": "Hawaii",
+                    "postcode": "96740",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Paradise Road, Holualoa, Kailua-Kona, Hawaii County, Hawaii, 96740, United States",
+                "name": "Paradise Road"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Italian Vineyard Villa",
+        "price": "850",
+        "description": "Villa surrounded by vineyards, ideal for wine lovers",
+        "location": "43.77N, 11.25E",
+        "city": "Florence",
+        "state": "Tuscany",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [11.240, 43.760, 11.260, 43.780],
+            "geometry": {
+                "coordinates": [43.7701, 11.2502],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Vineyard Lane",
+                    "village": "Fiesole",
+                    "city": "Florence",
+                    "county": "Metropolitan City of Florence",
+                    "state": "Tuscany",
+                    "postcode": "50014",
+                    "country": "Italy",
+                    "country_code": "it"
+                },
+                "display_name": "Vineyard Lane, Fiesole, Florence, Metropolitan City of Florence, Tuscany, 50014, Italy",
+                "name": "Vineyard Lane"
+            }
+        },
+        "images": [
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg',
+            },
+            {
+                "url": 'https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+                "filename": 'YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg',
+            }
+        ],
+        "reviews": []
+    },
 ]
