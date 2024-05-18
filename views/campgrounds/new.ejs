@@ -1,8 +1,6 @@
 <% layout('layouts/boilerplate') %>
 
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.css' />
-    <link rel="stylesheet" href="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.css"
-        type="text/css" />
+
 
     <div class="row">
         <div class="col-md-6 col-lg-4 mx-auto">
@@ -27,30 +25,7 @@
                     <textarea class="form-control" name="campground[description]" id="description" rows="4" cols="50"
                         placeholder="Description" required></textarea>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="map">Location</label>
-                    <div id="map" class="rounded mb-3" style="height: 300px;"></div>
-                    <div class="mb-3 border rounded p-2">
-                        <h5>Now pointing at:</h5>
-                        <p id="pointerName" class="text-muted"></p>
-                        <h5>Will be saved as:</h5>
-                        <p id="pointerCoords" class="text-muted"></p>
-                    </div>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Help me find the place 🕵🏻‍♂️
-                    </button>
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body  border-info">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Place name" id="searchMapInput" aria-label="" aria-describedby="" novalidate>
-                                <button class="btn btn-outline-primary" type="button" id="searchMapButton">🔍</button>
-                            </div>
-                            <ul id="mapSearchResults" class="list-group border-0"></ul>
-                            <input class="form-control" type="text" name="campground[geojson]" id="geojson" placeholder="geojson" required hidden>
-                        </div>
-                    </div>
-                </div>
+                <%- include('../partials/mapPicker') %>
                 <div class="mb-3">
                     <label class="form-label" for="city">City</label>
                     <input class="form-control" type="text" name="campground[city]" id="city" placeholder="City"
@@ -72,6 +47,5 @@
         </div>
     </div>
 
-    <script src='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.js'></script>
-    <script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.min.js"></script>
-    <script src="/javascripts/new.js"></script>
+
+    

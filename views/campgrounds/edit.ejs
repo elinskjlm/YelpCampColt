@@ -52,6 +52,7 @@
                     <textarea class="form-control" name="campground[description]" id="description" rows="4" cols="50"
                         placeholder="Description" required><%= camp.description %></textarea>
                 </div>
+                <%- include('../partials/mapPicker') %>
                 <div class="mb-3">
                     <label class="form-label" for="city">City</label>
                     <input class="form-control" type="text" name="campground[city]" id="city" placeholder="City" value="<%= camp.city %>" required>
@@ -66,3 +67,7 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const feature = '<%- JSON.stringify(camp.geojson) %>';
+    </script>

@@ -51,6 +51,7 @@ module.exports.renderEditForm = async (req, res) => {
 }
 
 module.exports.editCampground = async (req, res) => {
+    req.body.campground.geojson = JSON.parse(req.body.campground.geojson);
     const { id } = req.params;
     // Better TODO it all at once, instead of multiple calls.
     const camp = await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });

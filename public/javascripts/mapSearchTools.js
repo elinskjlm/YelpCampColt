@@ -1,3 +1,9 @@
+import { createMapAndMarker } from './mapRender.js';
+const place = (typeof(feature) === 'undefined') ? "" : feature;
+
+const { map, marker: markerSearch } = createMapAndMarker(place);
+markerSearch.setDraggable(true);
+
 let results = [];
 let bounds = maplibregl.LngLatBounds; // ??? TODO maybe just: let bounds;
 
@@ -17,44 +23,6 @@ const geojsonObjectDefault = {
 
 let geojsonObject = geojsonObjectDefault;
 geojsonField.value = JSON.stringify(geojsonObject)
-
-const style = {
-    'version': 8,
-    'sources': {
-        'raster-tiles': {
-            'type': 'raster',
-            'tiles': [
-                // NOTE: Layers from Stadia Maps do not require an API key for localhost development or most production
-                // web deployments. See https://docs.stadiamaps.com/authentication/ for details.
-                'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
-            ],
-            'tileSize': 256,
-        }
-    },
-    'layers': [
-        {
-            'id': 'simple-tiles',
-            'type': 'raster',
-            'source': 'raster-tiles',
-            'minzoom': 0,
-            'maxzoom': 22
-        }
-    ]
-}
-
-const map = new maplibregl.Map({
-    container: 'map', // container id
-    style,
-    center: [0, 0], // [lng, lat]
-    zoom: 1
-});
-
-const markerSearch = new maplibregl.Marker({
-    color: "#FF0000",
-    draggable: true
-})
-.setLngLat([0, 0])
-.addTo(map);
 
 async function reverseSearch(lng, lat) {
     const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=geojson`);
@@ -89,7 +57,7 @@ const wrapReverseSearch = async () => {
         geojsonObject = geojsonObjectDefault;
     }
     geojsonObject.geometry.coordinates = [lat, lng];
-    geojsonField.value = JSON.stringify(geojsonObject) // 👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻👈🏻
+    geojsonField.value = JSON.stringify(geojsonObject)
     pointerCoords.innerHTML = `Latitude: ${lat},<br>Longitude ${lng}`;
 }
 
