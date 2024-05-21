@@ -30,6 +30,7 @@ module.exports.isAuthor = async(req, res, next) => {
 }
 
 module.exports.validateCampground = (req, res, next) => {
+    req.body.campground.geojson = JSON.parse(req.body.campground.geojson);
     const { error } = campgroundSchema.validate(req.body.campground);
     if (error) {
         const msg = error.details.map(el => el.message).join(',\t');

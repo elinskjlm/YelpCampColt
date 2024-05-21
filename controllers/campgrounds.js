@@ -11,7 +11,6 @@ module.exports.renderNewForm = async (req, res) => {
 }
 
 module.exports.createCampground = async (req, res, next) => {
-    req.body.campground.geojson = JSON.parse(req.body.campground.geojson);
     const newCamp = new Campground(req.body.campground);
     newCamp.author = req.user._id;
     newCamp.images = req.files.map(f => ({ url: f.path, filename: f.filename })); 
