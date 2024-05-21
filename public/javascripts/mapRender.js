@@ -1,12 +1,4 @@
 
-const parseFeature = (feature) => {
-    const place = feature ? JSON.parse(feature) : "";
-    const lat = place?.geometry?.coordinates[0] ?? 0;
-    const lng = place?.geometry?.coordinates[1] ?? 0;
-    return { lng, lat };
-}
-
-
 const style = {
     'version': 8,
     'sources': {
@@ -31,23 +23,33 @@ const style = {
     ]
 }
 
+const parseFeature = (feature) => {
+    const place = feature ? JSON.parse(feature) : "";
+    const lat = place?.geometry?.coordinates[0] ?? 0;
+    const lng = place?.geometry?.coordinates[1] ?? 0;
+    return { lng, lat };
+}
 
-export const createMapAndMarker = (feature) => {
-    const { lng, lat } = parseFeature(feature);
-    
+const createMap = (lng, lat) => {
     const map = new maplibregl.Map({
         container: 'map', // container id
         style,
-        center: [lng, lat], // [lng, lat]
+        center: [lng, lat],
         zoom: 3
     });
-    
+    return map;
+}
+
+const createMarker = (map, lng, lat) => {
     const marker = new maplibregl.Marker({ color: "#FF0000" })
         .setLngLat([lng, lat])
         .addTo(map)
-
-    return { map, marker };
+    return marker;
 }
 
-
-
+export const createMapAndMarker = (feature) => {
+    const { lng, lat } = parseFeature(feature);
+    const map = createMap(lng, lat);
+    const marker = createMarker(map, lng, lat);
+    return { map, marker };
+}
