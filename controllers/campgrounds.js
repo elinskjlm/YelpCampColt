@@ -1,5 +1,6 @@
 const Campground =      require('../models/campground');
-const { cloudinary } =  require('../cloudinary')
+const { cloudinary } =  require('../cloudinary');
+const campground = require('../models/campground');
 
 module.exports.index = async (req, res) => {
     const campgrounds = await Campground.find({});
@@ -41,12 +42,12 @@ module.exports.renderCampground = async (req, res) => {
 
 module.exports.renderEditForm = async (req, res) => {
     const { id } = req.params;
-    const camp = await Campground.findById(id);
-    if (!camp) {
+    const campground = await Campground.findById(id);
+    if (!campground) {
         req.flash('error', `Cannot find that campground 🤷🏻‍♂️`);
         return res.redirect(`/campground/${id}`);
     }
-    res.render('campgrounds/edit', { camp });
+    res.render('campgrounds/edit', { campground });
 }
 
 module.exports.editCampground = async (req, res) => {
