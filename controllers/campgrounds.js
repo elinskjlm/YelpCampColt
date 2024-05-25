@@ -1,10 +1,36 @@
 const Campground =      require('../models/campground');
 const { cloudinary } =  require('../cloudinary');
-const campground = require('../models/campground');
 
 module.exports.index = async (req, res) => {
+
+    const features = await Campground.aggregate([
+        {
+            $project: {
+                type: "Feature",
+                geometry: {
+                    type: "$geojson.geometry.type",
+                    coordinates: [
+                        { $arrayElemAt: ["$geojson.geometry.coordinates", 1] },
+                        { $arrayElemAt: ["$geojson.geometry.coordinates", 0] }
+                    ]
+                },
+                properties: {
+                    $mergeObjects: [
+                        "$geojson.properties",
+                        {
+                            title: "$title",
+                            price: "$price",
+                            id: "$_id",
+                        }
+                    ]
+                },
+            }
+        }
+    ]).exec().then(results => results);
+
+
     const campgrounds = await Campground.find({});
-    res.render('campgrounds/index', { campgrounds });
+    res.render('campgrounds/index', { campgrounds, features });
 }
 
 module.exports.renderNewForm = async (req, res) => {
@@ -14,7 +40,7 @@ module.exports.renderNewForm = async (req, res) => {
 module.exports.createCampground = async (req, res, next) => {
     const newCamp = new Campground(req.body.campground);
     newCamp.author = req.user._id;
-    newCamp.images = req.files.map(f => ({ url: f.path, filename: f.filename })); 
+    newCamp.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
     const id = newCamp._id;
     await newCamp.save();
     req.flash('success', 'Succesfully made a new campground 👍🏻');
@@ -29,10 +55,10 @@ module.exports.renderCampground = async (req, res) => {
     delete req.session.reviewDraft;
     if (idIsValid) {
         const campground = await Campground.findById(id)
-        .populate({path: 'reviews', populate: {
-            path: 'author'
-        }})
-        .populate('author');
+            .populate({path: 'reviews', populate: {
+                    path: 'author'
+                }})
+            .populate('author');
         if (campground) return res.render('campgrounds/show', { campground, reviewDraft });
     }
     const shortId = id.length <= 24 ? id : (id.slice(0, 10) + '...');
@@ -56,7 +82,7 @@ module.exports.editCampground = async (req, res) => {
     // Better TODO it all at once, instead of multiple calls.
     const camp = await Campground.findByIdAndUpdate(id, { ...req.body.campground }, { runValidators: true, new: true });
     const images = req.files.map(f => ({ url: f.path, filename: f.filename }));
-    camp.images.push(...images); 
+    camp.images.push(...images);
     camp.save();
     if (req.body.deleteImages){
         for (let filename of req.body.deleteImages){

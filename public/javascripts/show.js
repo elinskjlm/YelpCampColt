@@ -1,2 +1,2 @@
-import { createMapAndMarker } from './mapRender.js';
-createMapAndMarker(feature);
+import { createMapAndMarker, createMap } from './mapRender.js';
+feature ? createMapAndMarker(feature) : createMap(0, 0);

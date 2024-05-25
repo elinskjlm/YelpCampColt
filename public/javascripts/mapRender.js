@@ -8,6 +8,7 @@ const style = {
                 // NOTE: Layers from Stadia Maps do not require an API key for localhost development or most production
                 // web deployments. See https://docs.stadiamaps.com/authentication/ for details.
                 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+                // 'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg'
             ],
             'tileSize': 256,
         }
@@ -30,7 +31,7 @@ const parseFeature = (feature) => {
     return { lng, lat };
 }
 
-const createMap = (lng, lat) => {
+export const createMap = (lng, lat) => {
     const map = new maplibregl.Map({
         container: 'map', // container id
         style,
@@ -40,7 +41,7 @@ const createMap = (lng, lat) => {
     return map;
 }
 
-const createMarker = (map, lng, lat) => {
+export const createMarker = (map, lng, lat) => {
     const marker = new maplibregl.Marker({ color: "#FF0000" })
         .setLngLat([lng, lat])
         .addTo(map)
