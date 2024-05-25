@@ -10,7 +10,7 @@ module.exports.campgroundSchema = Joi.object({
             type:           Joi.string().valid('Point'),
         }),
         properties: Joi.object(),
-    })/*.required()*/, // TODO geo feature validation
+    }).required(), // TODO geo feature validation
     images:         Joi.array(), // TODO images validation // TODO consider using fallback, read https://joi.dev/api/?v=17.13.0#anydefaultvalue
     description:    Joi.string().required().min(2).max(2048),
     city:           Joi.string().required().min(2).max(2048),

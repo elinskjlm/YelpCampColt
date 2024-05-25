@@ -5,7 +5,6 @@ module.exports = [
         "title": "Tranquil Creek",
         "price": "480",
         "description": "Secluded, nature lovers",
-        "location": "41.29N, 78.87W",
         "city": "DuBois",
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
@@ -47,7 +46,6 @@ module.exports = [
         "title": "Sunny Meadows",
         "price": "350",
         "description": "Open fields, ideal for picnics and outdoor games",
-        "location": "41.05N, 78.61W",
         "city": "Clearfield",
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
@@ -89,7 +87,6 @@ module.exports = [
         "title": "Whispering Pines",
         "price": "560",
         "description": "Dense forests, perfect for hiking and birdwatching",
-        "location": "41.15N, 78.50W",
         "city": "Clearfield",
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
@@ -131,7 +128,6 @@ module.exports = [
         "title": "Crystal Lake",
         "price": "620",
         "description": "Lakeside retreat, great for fishing and kayaking",
-        "location": "41.38N, 78.65W",
         "city": "St. Marys",
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
@@ -173,7 +169,6 @@ module.exports = [
         "title": "Mountain Haven",
         "price": "700",
         "description": "Serene mountain cabin, perfect for hiking and stargazing",
-        "location": "35.56N, 83.51W",
         "city": "Gatlinburg",
         "state": "Tennessee",
         "author": "66266bf983dd33289670361a",
@@ -214,7 +209,6 @@ module.exports = [
         "title": "Desert Oasis",
         "price": "480",
         "description": "Isolated desert spot, perfect for off-grid living and stargazing",
-        "location": "36.12N, 115.17W",
         "city": "Las Vegas",
         "state": "Nevada",
         "author": "66266bf983dd33289670361a",
@@ -255,7 +249,6 @@ module.exports = [
         "title": "Coastal Paradise",
         "price": "850",
         "description": "Beachfront site, ideal for surfing and sunbathing",
-        "location": "33.77S, 151.29E",
         "city": "Sydney",
         "state": "New South Wales",
         "author": "66266bf983dd33289670361a",
@@ -297,7 +290,6 @@ module.exports = [
         "title": "Arctic Retreat",
         "price": "950",
         "description": "Remote location, great for viewing the Northern Lights",
-        "location": "64.13N, 21.90W",
         "city": "Reykjavik",
         "state": "",
         "author": "66266bf983dd33289670361a",
@@ -337,7 +329,6 @@ module.exports = [
         "title": "Amazon Jungle Camp",
         "price": "420",
         "description": "Deep in the jungle, ideal for adventure and wildlife",
-        "location": "-3.47S, -62.22W",
         "city": "Manaus",
         "state": "Amazonas",
         "author": "66266bf983dd33289670361a",
@@ -378,7 +369,6 @@ module.exports = [
         "title": "Safari Lodge",
         "price": "980",
         "description": "Luxury safari experience, perfect for wildlife photography",
-        "location": "-1.37S, 35.65E",
         "city": "Maasai Mara",
         "state": "Narok County",
         "author": "66266bf983dd33289670361a",
@@ -418,7 +408,6 @@ module.exports = [
         "title": "Swiss Chalet",
         "price": "1200",
         "description": "Mountain chalet, perfect for skiing and winter sports",
-        "location": "46.49N, 7.68E",
         "city": "Interlaken",
         "state": "Bern",
         "author": "66266bf983dd33289670361a",
@@ -459,7 +448,6 @@ module.exports = [
         "title": "Tropical Hideaway",
         "price": "680",
         "description": "Secluded beach bungalow, great for snorkeling and relaxing",
-        "location": "14.60N, 120.97E",
         "city": "El Nido",
         "state": "Palawan",
         "author": "66266bf983dd33289670361a",
@@ -500,7 +488,6 @@ module.exports = [
         "title": "Scottish Highlands Retreat",
         "price": "530",
         "description": "Rustic cabin, great for hiking and exploring",
-        "location": "57.48N, 4.23W",
         "city": "Inverness",
         "state": "Scotland",
         "author": "66266bf983dd33289670361a",
@@ -541,7 +528,6 @@ module.exports = [
         "title": "Mediterranean Escape",
         "price": "750",
         "description": "Seaside villa, perfect for sunbathing and dining",
-        "location": "37.98N, 23.73E",
         "city": "Athens",
         "state": "Attica",
         "author": "66266bf983dd33289670361a",
@@ -582,7 +568,6 @@ module.exports = [
         "title": "Alaskan Wilderness",
         "price": "600",
         "description": "Cabin in the wild, ideal for fishing and hiking",
-        "location": "64.84N, 147.72W",
         "city": "Fairbanks",
         "state": "Alaska",
         "author": "66266bf983dd33289670361a",
@@ -623,7 +608,6 @@ module.exports = [
         "title": "French Countryside Cottage",
         "price": "670",
         "description": "Cozy cottage, ideal for wine tasting and cycling",
-        "location": "48.94N, 2.10E",
         "city": "Versailles",
         "state": "Île-de-France",
         "author": "66266bf983dd33289670361a",
@@ -664,7 +648,6 @@ module.exports = [
         "title": "Japanese Ryokan",
         "price": "740",
         "description": "Traditional inn, perfect for cultural experiences and relaxation",
-        "location": "35.02N, 135.75E",
         "city": "Kyoto",
         "state": "Kyoto Prefecture",
         "author": "66266bf983dd33289670361a",
@@ -704,7 +687,6 @@ module.exports = [
         "title": "Canadian Rockies Lodge",
         "price": "800",
         "description": "Mountain lodge, perfect for skiing and wildlife",
-        "location": "51.18N, 115.57W",
         "city": "Banff",
         "state": "Alberta",
         "author": "66266bf983dd33289670361a",
@@ -745,7 +727,6 @@ module.exports = [
         "title": "New Zealand Bay",
         "price": "650",
         "description": "Seaside retreat, perfect for kayaking and whale watching",
-        "location": "35.28S, 174.09E",
         "city": "Paihia",
         "state": "Northland",
         "author": "66266bf983dd33289670361a",
@@ -786,7 +767,6 @@ module.exports = [
         "title": "African Desert Camp",
         "price": "550",
         "description": "Remote desert camp, perfect for camel rides and stargazing",
-        "location": "23.41S, 13.08E",
         "city": "Swakopmund",
         "state": "Erongo",
         "author": "66266bf983dd33289670361a",
@@ -827,7 +807,6 @@ module.exports = [
         "title": "Amazon Rainforest Lodge",
         "price": "700",
         "description": "Eco-lodge, great for wildlife spotting and jungle tours",
-        "location": "3.47S, 60.02W",
         "city": "Manaus",
         "state": "Amazonas",
         "author": "66266bf983dd33289670361a",
@@ -868,7 +847,6 @@ module.exports = [
         "title": "Australian Outback Station",
         "price": "480",
         "description": "Remote station, ideal for outback adventures and wildlife",
-        "location": "23.70S, 133.87E",
         "city": "Alice Springs",
         "state": "Northern Territory",
         "author": "66266bf983dd33289670361a",
@@ -909,7 +887,6 @@ module.exports = [
         "title": "Hawaiian Paradise",
         "price": "900",
         "description": "Beachfront house, perfect for surfing and sunsets",
-        "location": "19.43N, 155.90W",
         "city": "Kailua-Kona",
         "state": "Hawaii",
         "author": "66266bf983dd33289670361a",
@@ -950,7 +927,6 @@ module.exports = [
         "title": "Italian Vineyard Villa",
         "price": "850",
         "description": "Villa surrounded by vineyards, ideal for wine lovers",
-        "location": "43.77N, 11.25E",
         "city": "Florence",
         "state": "Tuscany",
         "author": "66266bf983dd33289670361a",
@@ -987,4 +963,606 @@ module.exports = [
         ],
         "reviews": []
     },
+    {
+        "title": "Forest Glade",
+        "price": "520",
+        "description": "Quiet forest clearing, perfect for camping and nature walks",
+        "city": "Binghamton",
+        "state": "New York",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-75.932, 42.071, -75.901, 42.092],
+            "geometry": {
+                "coordinates": [42.0815, -75.9159],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Whispering Pines Road",
+                    "hamlet": "Park Terrace",
+                    "city": "Binghamton",
+                    "county": "Broome County",
+                    "state": "New York",
+                    "ISO3166-2-lvl4": "US-NY",
+                    "postcode": "13905",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Whispering Pines Road, Park Terrace, Binghamton, Broome County, New York, 13905, United States",
+                "name": "Whispering Pines Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Golden Sands",
+        "price": "780",
+        "description": "Scenic beach location, ideal for relaxation and swimming",
+        "city": "Myrtle Beach",
+        "state": "South Carolina",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-78.925, 33.673, -78.893, 33.694],
+            "geometry": {
+                "coordinates": [33.6831, -78.9091],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Ocean Boulevard",
+                    "city": "Myrtle Beach",
+                    "county": "Horry County",
+                    "state": "South Carolina",
+                    "ISO3166-2-lvl4": "US-SC",
+                    "postcode": "29577",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Ocean Boulevard, Myrtle Beach, Horry County, South Carolina, 29577, United States",
+                "name": "Ocean Boulevard"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Canyon View",
+        "price": "600",
+        "description": "Breathtaking canyon vistas, great for photography and hiking",
+        "city": "Sedona",
+        "state": "Arizona",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-111.809, 34.831, -111.778, 34.854],
+            "geometry": {
+                "coordinates": [34.8423, -111.7935],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Red Rock Road",
+                    "city": "Sedona",
+                    "county": "Yavapai County",
+                    "state": "Arizona",
+                    "ISO3166-2-lvl4": "US-AZ",
+                    "postcode": "86336",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Red Rock Road, Sedona, Yavapai County, Arizona, 86336, United States",
+                "name": "Red Rock Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Lakeside Getaway",
+        "price": "540",
+        "description": "Peaceful lakeside cabin, perfect for fishing and canoeing",
+        "city": "Madison",
+        "state": "Wisconsin",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-89.420, 43.045, -89.400, 43.065],
+            "geometry": {
+                "coordinates": [43.0552, -89.4103],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Lake Shore Drive",
+                    "city": "Madison",
+                    "county": "Dane County",
+                    "state": "Wisconsin",
+                    "ISO3166-2-lvl4": "US-WI",
+                    "postcode": "53715",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Lake Shore Drive, Madison, Dane County, Wisconsin, 53715, United States",
+                "name": "Lake Shore Drive"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Hilltop Haven",
+        "price": "690",
+        "description": "Secluded hilltop, great for hiking and scenic views",
+        "city": "Asheville",
+        "state": "North Carolina",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-82.582, 35.550, -82.560, 35.570],
+            "geometry": {
+                "coordinates": [35.5601, -82.5711],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "High Ridge Road",
+                    "city": "Asheville",
+                    "county": "Buncombe County",
+                    "state": "North Carolina",
+                    "ISO3166-2-lvl4": "US-NC",
+                    "postcode": "28801",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "High Ridge Road, Asheville, Buncombe County, North Carolina, 28801, United States",
+                "name": "High Ridge Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Mountain Peak",
+        "price": "800",
+        "description": "Challenging mountain trails with stunning summit views",
+        "city": "Boulder",
+        "state": "Colorado",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-105.299, 40.000, -105.268, 40.021],
+            "geometry": {
+                "coordinates": [40.0104, -105.2835],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Summit Road",
+                    "city": "Boulder",
+                    "county": "Boulder County",
+                    "state": "Colorado",
+                    "ISO3166-2-lvl4": "US-CO",
+                    "postcode": "80302",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Summit Road, Boulder, Boulder County, Colorado, 80302, United States",
+                "name": "Summit Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Desert Oasis",
+        "price": "650",
+        "description": "A tranquil desert retreat with starry night skies",
+        "city": "Palm Springs",
+        "state": "California",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-116.565, 33.811, -116.535, 33.831],
+            "geometry": {
+                "coordinates": [33.821, -116.550],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Oasis Road",
+                    "city": "Palm Springs",
+                    "county": "Riverside County",
+                    "state": "California",
+                    "ISO3166-2-lvl4": "US-CA",
+                    "postcode": "92262",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Oasis Road, Palm Springs, Riverside County, California, 92262, United States",
+                "name": "Oasis Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Riverbend Retreat",
+        "price": "720",
+        "description": "Riverside campsite with excellent fishing and kayaking",
+        "city": "Bend",
+        "state": "Oregon",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-121.338, 44.058, -121.307, 44.078],
+            "geometry": {
+                "coordinates": [44.068, -121.322],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "River Road",
+                    "city": "Bend",
+                    "county": "Deschutes County",
+                    "state": "Oregon",
+                    "ISO3166-2-lvl4": "US-OR",
+                    "postcode": "97701",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "River Road, Bend, Deschutes County, Oregon, 97701, United States",
+                "name": "River Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Sunny Meadow",
+        "price": "490",
+        "description": "Open meadow with plenty of sunshine and wildflowers",
+        "city": "Lexington",
+        "state": "Kentucky",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-84.516, 38.014, -84.485, 38.035],
+            "geometry": {
+                "coordinates": [38.025, -84.500],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Meadow Lane",
+                    "city": "Lexington",
+                    "county": "Fayette County",
+                    "state": "Kentucky",
+                    "ISO3166-2-lvl4": "US-KY",
+                    "postcode": "40507",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Meadow Lane, Lexington, Fayette County, Kentucky, 40507, United States",
+                "name": "Meadow Lane"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Woodland Escape",
+        "price": "560",
+        "description": "Secluded woodland area with plenty of wildlife",
+        "city": "Seattle",
+        "state": "Washington",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-122.341, 47.595, -122.310, 47.615],
+            "geometry": {
+                "coordinates": [47.605, -122.325],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Forest Drive",
+                    "city": "Seattle",
+                    "county": "King County",
+                    "state": "Washington",
+                    "ISO3166-2-lvl4": "US-WA",
+                    "postcode": "98101",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Forest Drive, Seattle, King County, Washington, 98101, United States",
+                "name": "Forest Drive"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Coastal Cliffs",
+        "price": "810",
+        "description": "Dramatic coastal cliffs with panoramic ocean views",
+        "city": "Big Sur",
+        "state": "California",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-121.802, 36.235, -121.771, 36.255],
+            "geometry": {
+                "coordinates": [36.245, -121.787],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Cliffside Road",
+                    "city": "Big Sur",
+                    "county": "Monterey County",
+                    "state": "California",
+                    "ISO3166-2-lvl4": "US-CA",
+                    "postcode": "93920",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Cliffside Road, Big Sur, Monterey County, California, 93920, United States",
+                "name": "Cliffside Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Canyon Camp",
+        "price": "760",
+        "description": "Canyon camping with hiking and rock climbing",
+        "city": "Moab",
+        "state": "Utah",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-109.601, 38.556, -109.570, 38.576],
+            "geometry": {
+                "coordinates": [38.566, -109.586],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Canyon Road",
+                    "city": "Moab",
+                    "county": "Grand County",
+                    "state": "Utah",
+                    "ISO3166-2-lvl4": "US-UT",
+                    "postcode": "84532",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Canyon Road, Moab, Grand County, Utah, 84532, United States",
+                "name": "Canyon Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Prairie Plains",
+        "price": "570",
+        "description": "Expansive prairie with open skies and quiet solitude",
+        "city": "Fargo",
+        "state": "North Dakota",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-96.842, 46.855, -96.811, 46.875],
+            "geometry": {
+                "coordinates": [46.865, -96.826],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Prairie Road",
+                    "city": "Fargo",
+                    "county": "Cass County",
+                    "state": "North Dakota",
+                    "ISO3166-2-lvl4": "US-ND",
+                    "postcode": "58102",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Prairie Road, Fargo, Cass County, North Dakota, 58102, United States",
+                "name": "Prairie Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Forest Falls",
+        "price": "790",
+        "description": "Camping near beautiful waterfalls and lush forest",
+        "city": "Asheville",
+        "state": "North Carolina",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-82.567, 35.592, -82.536, 35.612],
+            "geometry": {
+                "coordinates": [35.602, -82.551],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Falls Road",
+                    "city": "Asheville",
+                    "county": "Buncombe County",
+                    "state": "North Carolina",
+                    "ISO3166-2-lvl4": "US-NC",
+                    "postcode": "28801",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Falls Road, Asheville, Buncombe County, North Carolina, 28801, United States",
+                "name": "Falls Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Glacier Glamp",
+        "price": "900",
+        "description": "Luxury glamping near stunning glaciers",
+        "city": "Anchorage",
+        "state": "Alaska",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-149.895, 61.203, -149.864, 61.223],
+            "geometry": {
+                "coordinates": [61.213, -149.879],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Glacier Road",
+                    "city": "Anchorage",
+                    "county": "Anchorage Municipality",
+                    "state": "Alaska",
+                    "ISO3166-2-lvl4": "US-AK",
+                    "postcode": "99501",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Glacier Road, Anchorage, Anchorage Municipality, Alaska, 99501, United States",
+                "name": "Glacier Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    }
+
 ]
