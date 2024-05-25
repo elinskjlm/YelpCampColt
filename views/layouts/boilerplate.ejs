@@ -13,6 +13,9 @@
 </head>
 
 <body class="d-flex flex-column vh-100">
+    <script src='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.js'></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.min.js"></script>
+    <script src="/javascripts/validateForms.js"></script>
     <%- include('../partials/navbar') %>
     
     <main class="container mt-5">
@@ -26,9 +29,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous">
     </script>
-    <script src='https://unpkg.com/maplibre-gl@4.2.0/dist/maplibre-gl.js'></script>
-    <script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/dist/maplibre-gl-geocoder.min.js"></script>
-    <script src="/javascripts/validateForms.js"></script>
     <!-- TODO maybe not use it on layout, only for show page -->
     <script src="/javascripts/eventAddImagesButton.js"></script> <!-- TODO put it back to use, where and when it is relevant -->
 </body>
