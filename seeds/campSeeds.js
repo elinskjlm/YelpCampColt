@@ -1563,6 +1563,845 @@ module.exports = [
             }
         ],
         "reviews": []
-    }
-
+    },
+    {
+        "title": "Mountain Peak",
+        "price": "800",
+        "description": "Challenging mountain trails with stunning summit views",
+        "city": "Boulder",
+        "state": "Colorado",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-105.299, 40.000, -105.268, 40.021],
+            "geometry": {
+                "coordinates": [40.0104, -105.2835],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Summit Road",
+                    "city": "Boulder",
+                    "county": "Boulder County",
+                    "state": "Colorado",
+                    "ISO3166-2-lvl4": "US-CO",
+                    "postcode": "80302",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Summit Road, Boulder, Boulder County, Colorado, 80302, United States",
+                "name": "Summit Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Desert Oasis",
+        "price": "650",
+        "description": "A tranquil desert retreat with starry night skies",
+        "city": "Palm Springs",
+        "state": "California",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-116.565, 33.811, -116.535, 33.831],
+            "geometry": {
+                "coordinates": [33.821, -116.550],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Oasis Road",
+                    "city": "Palm Springs",
+                    "county": "Riverside County",
+                    "state": "California",
+                    "ISO3166-2-lvl4": "US-CA",
+                    "postcode": "92262",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Oasis Road, Palm Springs, Riverside County, California, 92262, United States",
+                "name": "Oasis Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Riverbend Retreat",
+        "price": "720",
+        "description": "Riverside campsite with excellent fishing and kayaking",
+        "city": "Bend",
+        "state": "Oregon",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-121.338, 44.058, -121.307, 44.078],
+            "geometry": {
+                "coordinates": [44.068, -121.322],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "River Road",
+                    "city": "Bend",
+                    "county": "Deschutes County",
+                    "state": "Oregon",
+                    "ISO3166-2-lvl4": "US-OR",
+                    "postcode": "97701",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "River Road, Bend, Deschutes County, Oregon, 97701, United States",
+                "name": "River Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Sunny Meadow",
+        "price": "490",
+        "description": "Open meadow with plenty of sunshine and wildflowers",
+        "city": "Lexington",
+        "state": "Kentucky",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-84.516, 38.014, -84.485, 38.035],
+            "geometry": {
+                "coordinates": [38.025, -84.500],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Meadow Lane",
+                    "city": "Lexington",
+                    "county": "Fayette County",
+                    "state": "Kentucky",
+                    "ISO3166-2-lvl4": "US-KY",
+                    "postcode": "40507",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Meadow Lane, Lexington, Fayette County, Kentucky, 40507, United States",
+                "name": "Meadow Lane"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Woodland Escape",
+        "price": "560",
+        "description": "Secluded woodland area with plenty of wildlife",
+        "city": "Seattle",
+        "state": "Washington",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-122.341, 47.595, -122.310, 47.615],
+            "geometry": {
+                "coordinates": [47.605, -122.325],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Forest Drive",
+                    "city": "Seattle",
+                    "county": "King County",
+                    "state": "Washington",
+                    "ISO3166-2-lvl4": "US-WA",
+                    "postcode": "98101",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Forest Drive, Seattle, King County, Washington, 98101, United States",
+                "name": "Forest Drive"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Coastal Cliffs",
+        "price": "810",
+        "description": "Dramatic coastal cliffs with panoramic ocean views",
+        "city": "Big Sur",
+        "state": "California",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-121.812, 36.245, -121.781, 36.265],
+            "geometry": {
+                "coordinates": [36.255, -121.797],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Cliffside Road",
+                    "city": "Big Sur",
+                    "county": "Monterey County",
+                    "state": "California",
+                    "ISO3166-2-lvl4": "US-CA",
+                    "postcode": "93920",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Cliffside Road, Big Sur, Monterey County, California, 93920, United States",
+                "name": "Cliffside Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Lakeside Haven",
+        "price": "700",
+        "description": "Peaceful lakeside camping with boating and fishing",
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-93.278, 44.963, -93.247, 44.983],
+            "geometry": {
+                "coordinates": [44.973, -93.262],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Lakeside Drive",
+                    "city": "Minneapolis",
+                    "county": "Hennepin County",
+                    "state": "Minnesota",
+                    "ISO3166-2-lvl4": "US-MN",
+                    "postcode": "55401",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Lakeside Drive, Minneapolis, Hennepin County, Minnesota, 55401, United States",
+                "name": "Lakeside Drive"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "High Desert",
+        "price": "600",
+        "description": "Remote high desert with spectacular sunsets and vast landscapes",
+        "city": "Santa Fe",
+        "state": "New Mexico",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-106.005, 35.683, -105.974, 35.703],
+            "geometry": {
+                "coordinates": [35.693, -105.989],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Desert Road",
+                    "city": "Santa Fe",
+                    "county": "Santa Fe County",
+                    "state": "New Mexico",
+                    "ISO3166-2-lvl4": "US-NM",
+                    "postcode": "87501",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Desert Road, Santa Fe, Santa Fe County, New Mexico, 87501, United States",
+                "name": "Desert Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Bayfront Bliss",
+        "price": "740",
+        "description": "Serene bayfront camping with easy access to water activities",
+        "city": "Tampa",
+        "state": "Florida",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-82.469, 27.931, -82.438, 27.951],
+            "geometry": {
+                "coordinates": [27.941, -82.453],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Bayfront Avenue",
+                    "city": "Tampa",
+                    "county": "Hillsborough County",
+                    "state": "Florida",
+                    "ISO3166-2-lvl4": "US-FL",
+                    "postcode": "33602",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Bayfront Avenue, Tampa, Hillsborough County, Florida, 33602, United States",
+                "name": "Bayfront Avenue"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Hilltop Hideaway",
+        "price": "820",
+        "description": "Quiet hilltop location with breathtaking valley views",
+        "city": "Nashville",
+        "state": "Tennessee",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-86.794, 36.146, -86.763, 36.166],
+            "geometry": {
+                "coordinates": [36.156, -86.779],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Hilltop Road",
+                    "city": "Nashville",
+                    "county": "Davidson County",
+                    "state": "Tennessee",
+                    "ISO3166-2-lvl4": "US-TN",
+                    "postcode": "37203",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Hilltop Road, Nashville, Davidson County, Tennessee, 37203, United States",
+                "name": "Hilltop Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Pine Grove",
+        "price": "530",
+        "description": "Shaded pine forest with cool breezes and hiking trails",
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-111.659, 35.186, -111.628, 35.206],
+            "geometry": {
+                "coordinates": [35.196, -111.644],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Pine Road",
+                    "city": "Flagstaff",
+                    "county": "Coconino County",
+                    "state": "Arizona",
+                    "ISO3166-2-lvl4": "US-AZ",
+                    "postcode": "86001",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Pine Road, Flagstaff, Coconino County, Arizona, 86001, United States",
+                "name": "Pine Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Forest Retreat",
+        "price": "550",
+        "description": "Secluded forest spot with tall trees and wildlife",
+        "city": "Bend",
+        "state": "Oregon",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-121.331, 44.041, -121.300, 44.061],
+            "geometry": {
+                "coordinates": [44.051, -121.315],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Forest Road",
+                    "city": "Bend",
+                    "county": "Deschutes County",
+                    "state": "Oregon",
+                    "ISO3166-2-lvl4": "US-OR",
+                    "postcode": "97701",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Forest Road, Bend, Deschutes County, Oregon, 97701, United States",
+                "name": "Forest Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Coastal Paradise",
+        "price": "780",
+        "description": "Stunning coastal campsite with sea views and beach access",
+        "city": "San Diego",
+        "state": "California",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-117.271, 32.851, -117.240, 32.871],
+            "geometry": {
+                "coordinates": [32.861, -117.256],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Coastal Road",
+                    "city": "San Diego",
+                    "county": "San Diego County",
+                    "state": "California",
+                    "ISO3166-2-lvl4": "US-CA",
+                    "postcode": "92101",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Coastal Road, San Diego, San Diego County, California, 92101, United States",
+                "name": "Coastal Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Mountain Escape",
+        "price": "890",
+        "description": "Mountain campsite with panoramic views and fresh air",
+        "city": "Denver",
+        "state": "Colorado",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-104.989, 39.724, -104.958, 39.744],
+            "geometry": {
+                "coordinates": [39.734, -104.973],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Mountain Road",
+                    "city": "Denver",
+                    "county": "Denver County",
+                    "state": "Colorado",
+                    "ISO3166-2-lvl4": "US-CO",
+                    "postcode": "80203",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Mountain Road, Denver, Denver County, Colorado, 80203, United States",
+                "name": "Mountain Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Sunny Meadows",
+        "price": "450",
+        "description": "Expansive meadow with wildflowers and sunny spots",
+        "city": "Boulder",
+        "state": "Colorado",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-105.285, 40.006, -105.254, 40.026],
+            "geometry": {
+                "coordinates": [40.016, -105.269],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Meadow Road",
+                    "city": "Boulder",
+                    "county": "Boulder County",
+                    "state": "Colorado",
+                    "ISO3166-2-lvl4": "US-CO",
+                    "postcode": "80302",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Meadow Road, Boulder, Boulder County, Colorado, 80302, United States",
+                "name": "Meadow Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "River Bend",
+        "price": "680",
+        "description": "Tranquil riverside spot with fishing and swimming",
+        "city": "Spokane",
+        "state": "Washington",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-117.429, 47.654, -117.398, 47.674],
+            "geometry": {
+                "coordinates": [47.664, -117.414],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "River Road",
+                    "city": "Spokane",
+                    "county": "Spokane County",
+                    "state": "Washington",
+                    "ISO3166-2-lvl4": "US-WA",
+                    "postcode": "99201",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "River Road, Spokane, Spokane County, Washington, 99201, United States",
+                "name": "River Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Woodland Camp",
+        "price": "620",
+        "description": "Camp in a dense woodland area with hiking trails",
+        "city": "Salem",
+        "state": "Oregon",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-123.070, 44.935, -123.039, 44.955],
+            "geometry": {
+                "coordinates": [44.945, -123.054],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Woodland Road",
+                    "city": "Salem",
+                    "county": "Marion County",
+                    "state": "Oregon",
+                    "ISO3166-2-lvl4": "US-OR",
+                    "postcode": "97301",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Woodland Road, Salem, Marion County, Oregon, 97301, United States",
+                "name": "Woodland Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Desert Oasis",
+        "price": "900",
+        "description": "Experience the desert at this secluded oasis",
+        "city": "Phoenix",
+        "state": "Arizona",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-112.087, 33.431, -112.056, 33.451],
+            "geometry": {
+                "coordinates": [33.441, -112.071],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Desert Road",
+                    "city": "Phoenix",
+                    "county": "Maricopa County",
+                    "state": "Arizona",
+                    "ISO3166-2-lvl4": "US-AZ",
+                    "postcode": "85001",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Desert Road, Phoenix, Maricopa County, Arizona, 85001, United States",
+                "name": "Desert Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Canyon Ridge",
+        "price": "950",
+        "description": "Breathtaking views from this canyon ridge campsite",
+        "city": "Moab",
+        "state": "Utah",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-109.572, 38.567, -109.541, 38.587],
+            "geometry": {
+                "coordinates": [38.577, -109.556],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Canyon Road",
+                    "city": "Moab",
+                    "county": "Grand County",
+                    "state": "Utah",
+                    "ISO3166-2-lvl4": "US-UT",
+                    "postcode": "84532",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Canyon Road, Moab, Grand County, Utah, 84532, United States",
+                "name": "Canyon Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Lakeside Haven",
+        "price": "700",
+        "description": "Peaceful lakeside camping with boating and fishing",
+        "city": "Madison",
+        "state": "Wisconsin",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-89.431, 43.065, -89.400, 43.085],
+            "geometry": {
+                "coordinates": [43.075, -89.415],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Lakeside Road",
+                    "city": "Madison",
+                    "county": "Dane County",
+                    "state": "Wisconsin",
+                    "ISO3166-2-lvl4": "US-WI",
+                    "postcode": "53703",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Lakeside Road, Madison, Dane County, Wisconsin, 53703, United States",
+                "name": "Lakeside Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "title": "Prairie Homestead",
+        "price": "580",
+        "description": "Historic homestead on a wide-open prairie",
+        "city": "Omaha",
+        "state": "Nebraska",
+        "author": "66266bf983dd33289670361a",
+        "geojson": {
+            "bbox": [-95.989, 41.231, -95.958, 41.251],
+            "geometry": {
+                "coordinates": [41.241, -95.973],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "road": "Prairie Road",
+                    "city": "Omaha",
+                    "county": "Douglas County",
+                    "state": "Nebraska",
+                    "ISO3166-2-lvl4": "US-NE",
+                    "postcode": "68101",
+                    "country": "United States",
+                    "country_code": "us"
+                },
+                "display_name": "Prairie Road, Omaha, Douglas County, Nebraska, 68101, United States",
+                "name": "Prairie Road"
+            }
+        },
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
+                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
+            }
+        ],
+        "reviews": []
+    },
 ]
