@@ -154,23 +154,20 @@ map.on('load', () => {
 })
 
 
-// // REALLY BAD, FLICKERS. TODO
-// const expendButton = document.getElementById('btnExpend');
-// const mapDiv = document.getElementById('map');
-// let mapHeight = 300;
+// REALLY BAD, FLICKERS. TODO
+const expendButton = document.getElementById('btnExpend');
+const mapDiv = document.getElementById('map');
+let mapHeight = 300;
 
-// mapDiv.style.transition = `height 0.5s`;
-// mapDiv.style.backfaceVisibility = 'hidden';
-// mapDiv.style.transform = 'translateZ(0)';
+mapDiv.style.transition = `height  2s ease-in-out .5s`;
+expendButton.addEventListener('click', () => {
+    if (mapHeight === 300){
+        mapHeight = 600;
+        expendButton.innerHTML = 'Retract map'
+    } else {
+        mapHeight = 300;
+        expendButton.innerHTML = 'Expend map'
+    }
+    mapDiv.style.height = `${mapHeight}px`;
 
-// expendButton.addEventListener('click', () => {
-//     if (mapHeight === 300){
-//         mapHeight = 600;
-//         expendButton.innerHTML = 'Retract map'
-//     } else {
-//         mapHeight = 300;
-//         expendButton.innerHTML = 'Expend map'
-//     }
-//     mapDiv.style.height = `${mapHeight}px`;
-
-// })
+})
