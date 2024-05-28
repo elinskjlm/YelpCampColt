@@ -26,7 +26,7 @@ const style = {
             'maxzoom': 22
         },
     ],
-    // 'glyphs': 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
+    'glyphs': 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
 }
 
 const map = new maplibregl.Map({
@@ -37,6 +37,12 @@ const map = new maplibregl.Map({
     minZoom: 1.4
 });
 
+const few = 10;
+const more = 20;
+const many = 30;
+const small = 15;
+const medium = 25;
+const big = 35;
 
 map.on('load', () => {
 
@@ -48,7 +54,7 @@ map.on('load', () => {
         },
         cluster: true,
         clusterMaxZoom: 14,
-        clusterRadius: 10
+        clusterRadius: small
     });
 
     map.addLayer({
@@ -66,34 +72,34 @@ map.on('load', () => {
                 'step',
                 ['get', 'point_count'],
                 '#51bbd6',
-                100,
+                few,
                 '#f1f075',
-                750,
+                more,
                 '#f28cb1'
             ],
             'circle-radius': [
                 'step',
                 ['get', 'point_count'],
-                20,
-                100,
-                30,
-                750,
-                40
+                small,
+                few,
+                medium,
+                more,
+                big
             ]
         }
     });
 
-    // map.addLayer({
-    //     id: 'cluster-count',
-    //     type: 'symbol',
-    //     source: 'campgroundsSource',
-    //     filter: ['has', 'point_count'],
-    //     layout: {
-    //         'text-field': '{point_count_abbreviated}',
-    //         'text-font': ['Arial'],
-    //         'text-size': 12,
-    //     },
-    // });
+    map.addLayer({
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'campgroundsSource',
+        filter: ['has', 'point_count'],
+        layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['Open Sans Semibold'],
+            'text-size': 12,
+        },
+    });
 
     map.addLayer({
         id: 'unclustered-point',
@@ -139,23 +145,12 @@ map.on('load', () => {
             .addTo(map);
     });
 
-
-
-
     map.on('mouseenter', 'clusters', () => {
         map.getCanvas().style.cursor = 'pointer';
     });
     map.on('mouseleave', 'clusters', () => {
         map.getCanvas().style.cursor = '';
     });
-    map.on('click', e => {
-        // console.log(e)
-        // console.log(map.getZoom())
-        console.log(map.style)
-    })
-
-
-
 })
 
 
