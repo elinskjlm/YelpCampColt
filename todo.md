@@ -58,3 +58,11 @@
 - [ ] (Other pages -> Add new)
     - [ ] If logged in: => new -> (newly made)
     - [ ] Else: => login (/signup!) -> (newly made)
+
+
+### Cluster map
+- [ ] Use virtual properties (instead of aggregate + $project)
+    - [ ] See https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/22346260 (Section 56, Lecture 572).
+    - [ ] Use opts = { toJSON: { virtuals: true } }
+
+# It is still uploading files before validating! 👈🏻
