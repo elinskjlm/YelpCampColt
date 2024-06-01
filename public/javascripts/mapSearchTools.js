@@ -58,7 +58,8 @@ const wrapReverseSearch = async () => {
     }
     geojsonObject.geometry.coordinates = [lat, lng];
     geojsonField.value = JSON.stringify(geojsonObject)
-    pointerCoords.innerHTML = `Latitude: ${lat},<br>Longitude ${lng}`;
+    pointerCoords.innerHTML = `Latitude: ${lat},<br>Longitude: ${lng}`;
+    document.querySelector('.manualMarkMap').classList.remove('border', 'border-danger', 'manualMarkMap')
 }
 
 markerSearch.on('dragend', () => {

@@ -11,6 +11,11 @@
                 if (!form.checkValidity()) {
                     event.preventDefault()
                     event.stopPropagation()
+                    const manualMarkMap = document.querySelectorAll('.manualMarkMap')
+                    Array.from(manualMarkMap)
+                        .forEach(function (el) {
+                            el.classList.add('border', 'border-danger')
+                        })
                 }
 
                 form.classList.add('was-validated')
