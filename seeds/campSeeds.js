@@ -1194,46 +1194,6 @@ module.exports = [
         "reviews": []
     },
     {
-        "title": "Mountain Peak",
-        "price": "800",
-        "description": "Challenging mountain trails with stunning summit views",
-        "city": "Boulder",
-        "state": "Colorado",
-        "author": "66266bf983dd33289670361a",
-        "geojson": {
-            "bbox": [-105.299, 40.000, -105.268, 40.021],
-            "geometry": {
-                "coordinates": [40.0104, -105.2835],
-                "type": "Point"
-            },
-            "properties": {
-                "address": {
-                    "road": "Summit Road",
-                    "city": "Boulder",
-                    "county": "Boulder County",
-                    "state": "Colorado",
-                    "ISO3166-2-lvl4": "US-CO",
-                    "postcode": "80302",
-                    "country": "United States",
-                    "country_code": "us"
-                },
-                "display_name": "Summit Road, Boulder, Boulder County, Colorado, 80302, United States",
-                "name": "Summit Road"
-            }
-        },
-        "images": [
-            {
-                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752862/YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg",
-                "filename": "YelpCamp/fallbacks/fallBackImageGemini04_llydqb.jpg"
-            },
-            {
-                "url": "https://res.cloudinary.com/dis3rrz4f/image/upload/v1714752857/YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg",
-                "filename": "YelpCamp/fallbacks/fallBackImageGemini02_kdt0cw.jpg"
-            }
-        ],
-        "reviews": []
-    },
-    {
         "title": "Desert Oasis",
         "price": "650",
         "description": "A tranquil desert retreat with starry night skies",

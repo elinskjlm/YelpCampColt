@@ -1,8 +1,3 @@
-// import { createMap } from './mapRender.js'
-// const map = createMap(-31, 45);
-
-
-
 const style = {
     'version': 8,
     'sources': {
@@ -30,9 +25,9 @@ const style = {
 }
 
 const map = new maplibregl.Map({
-    container: 'map', // container id
+    container: 'clusterMap', // container id
     style,
-    center: [-31, 45],
+    center: [-31, 45], // lat, lng
     zoom: 1.4,
     minZoom: 1.4
 });
@@ -148,26 +143,26 @@ map.on('load', () => {
     map.on('mouseenter', 'clusters', () => {
         map.getCanvas().style.cursor = 'pointer';
     });
+
     map.on('mouseleave', 'clusters', () => {
         map.getCanvas().style.cursor = '';
     });
+    
+    map.addControl(new maplibregl.NavigationControl());
 })
 
-
-// REALLY BAD, FLICKERS. TODO
 const expendButton = document.getElementById('btnExpend');
-const mapDiv = document.getElementById('map');
+const mapDiv = document.getElementById('clusterMap');
 let mapHeight = 300;
 
-mapDiv.style.transition = `height  2s ease-in-out .5s`;
 expendButton.addEventListener('click', () => {
     if (mapHeight === 300){
         mapHeight = 600;
         expendButton.innerHTML = 'Retract map'
+        mapDiv.style.height = `min(70vh, 600px)`; // TODO if 70vh < 300px - the verbs on the button are not correct
     } else {
         mapHeight = 300;
         expendButton.innerHTML = 'Expend map'
+        mapDiv.style.height = `${mapHeight}px`;
     }
-    mapDiv.style.height = `${mapHeight}px`;
-
 })
