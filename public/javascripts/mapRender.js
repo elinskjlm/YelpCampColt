@@ -38,6 +38,7 @@ export const createMap = (lng, lat) => {
         center: [lng, lat],
         zoom: 3
     });
+    map.addControl(new maplibregl.NavigationControl());
     return map;
 }
 
