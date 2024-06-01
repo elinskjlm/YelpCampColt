@@ -52,7 +52,33 @@
                     <textarea class="form-control" name="campground[description]" id="description" rows="4" cols="50"
                         placeholder="Description" required><%= campground.description %></textarea>
                 </div>
-                <%- include('../partials/mapPicker') %>
+                <p><%= campground.geojson %></p>
+                <section id="mapSection">
+                    <div class="mb-3">
+                        <label class="form-label" for="map">Location</label>
+                        <div id="map" class="rounded mb-3"></div>
+                        <div class="mb-3 border rounded p-2">
+                            <h5>Now pointing at:</h5>
+                            <p id="pointerName" class="text-muted"><%= campground.geojson.properties.display_name %></p>
+                            <h5>Will be saved as:</h5>
+                            <p id="pointerCoords" class="text-muted">Latitude: <%= campground.geojson.geometry.coordinates[0] %>,<br>Longitude: <%= campground.geojson.geometry.coordinates[1] %></p>
+                        </div>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Help me find the place 🕵🏻‍♂️
+                        </button>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body  border-info">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Place name" id="searchMapInput" aria-label="" aria-describedby="" novalidate>
+                                    <button class="btn btn-outline-primary" type="button" id="searchMapButton">🔍</button>
+                                </div>
+                                <ul id="mapSearchResults" class="list-group border-0"></ul>
+                                <input class="form-control border border-danger" type="text" name="campground[geojson]" id="geojson" placeholder="geojson" value="<%= JSON.stringify(campground.geojson) %>" hidden required>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="mb-3">
                     <label class="form-label" for="city">City</label>
                     <input class="form-control" type="text" name="campground[city]" id="city" placeholder="City" value="<%= campground.city %>" required>
@@ -69,5 +95,7 @@
     </div>
 
     <script>
+        // Will be passed to `javascripts/mapSearchTools.js`
         const feature = '<%- JSON.stringify(campground.geojson) %>';
     </script>
+    <script type="module" src="/javascripts/mapSearchTools.js"></script>

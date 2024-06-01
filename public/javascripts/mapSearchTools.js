@@ -22,7 +22,6 @@ const geojsonObjectDefault = {
 }
 
 let geojsonObject = geojsonObjectDefault;
-geojsonField.value = JSON.stringify(geojsonObject)
 
 async function reverseSearch(lng, lat) {
     const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=geojson`);
@@ -48,6 +47,7 @@ const wrapReverseSearch = async () => {
     map.easeTo(lat, lng);
     const data = await reverseSearch(lng, lat);
     if (!data.error) {
+        data.features[0] = JSON.parse(JSON.stringify(data.features[0]).replace(/[']/g, '&#39;')); // Aviod errors when parsing, after stringifying names containing "'" (Hebrew).
         pointerName.innerHTML = data.features[0].properties.display_name;
         geojsonObject = data.features[0];
     }

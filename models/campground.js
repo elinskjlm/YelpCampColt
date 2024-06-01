@@ -23,6 +23,11 @@ const FeatureSchema = new Schema({
     bbox: { // TODO Should be virtual(??)
         type: [Number],
     },
+    type: {
+        type: String,
+        enum: ['Feature'],
+        required: true,
+    },
     geometry: {
         coordinates: {
             type: [Number],
@@ -39,7 +44,7 @@ const FeatureSchema = new Schema({
         display_name: String,
         name: String,
     },
-})
+},  { _id: false })
 
 const CampgroundSchema = new Schema({
     title: String,

@@ -9,6 +9,7 @@ module.exports = [
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-78.737724, 41.124184, -78.7265119, 41.1319997],
             "geometry": {
                 "coordinates": [41.131595660217755, -78.73060451881925],
@@ -50,6 +51,7 @@ module.exports = [
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-78.623521, 41.041295, -78.611987, 41.052837],
             "geometry": {
                 "coordinates": [41.048563, -78.617654],
@@ -91,6 +93,7 @@ module.exports = [
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-78.515471, 41.141623, -78.503257, 41.154345],
             "geometry": {
                 "coordinates": [41.148390, -78.509364],
@@ -132,6 +135,7 @@ module.exports = [
         "state": "Pennsylvania",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-78.667815, 41.370629, -78.655542, 41.384293],
             "geometry": {
                 "coordinates": [41.378151, -78.661679],
@@ -173,6 +177,7 @@ module.exports = [
         "state": "Tennessee",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-83.526731, 35.540103, -83.513217, 35.570897],
             "geometry": {
                 "coordinates": [35.556124, -83.519435],
@@ -213,6 +218,7 @@ module.exports = [
         "state": "Nevada",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-115.181231, 36.113091, -115.160938, 36.127472],
             "geometry": {
                 "coordinates": [36.120543, -115.171894],
@@ -253,6 +259,7 @@ module.exports = [
         "state": "New South Wales",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [151.278, -33.789, 151.307, -33.761],
             "geometry": {
                 "coordinates": [-33.7764, 151.2937],
@@ -294,6 +301,7 @@ module.exports = [
         "state": "",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-21.920, 64.110, -21.880, 64.150],
             "geometry": {
                 "coordinates": [64.1305, -21.9023],
@@ -333,6 +341,7 @@ module.exports = [
         "state": "Amazonas",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-62.235, -3.485, -62.205, -3.455],
             "geometry": {
                 "coordinates": [-3.4702, -62.2198],
@@ -373,6 +382,7 @@ module.exports = [
         "state": "Narok County",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [35.635, -1.385, 35.665, -1.355],
             "geometry": {
                 "coordinates": [-1.3701, 35.6504],
@@ -412,6 +422,7 @@ module.exports = [
         "state": "Bern",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [7.660, 46.480, 7.700, 46.500],
             "geometry": {
                 "coordinates": [46.4902, 7.6801],
@@ -452,6 +463,7 @@ module.exports = [
         "state": "Palawan",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [120.960, 14.590, 120.980, 14.610],
             "geometry": {
                 "coordinates": [14.6003, 120.9701],
@@ -492,6 +504,7 @@ module.exports = [
         "state": "Scotland",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-4.240, 57.470, -4.220, 57.490],
             "geometry": {
                 "coordinates": [57.4801, -4.2302],
@@ -532,6 +545,7 @@ module.exports = [
         "state": "Attica",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [23.720, 37.970, 23.740, 37.990],
             "geometry": {
                 "coordinates": [37.9802, 23.7301],
@@ -572,6 +586,7 @@ module.exports = [
         "state": "Alaska",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-147.730, 64.830, -147.710, 64.850],
             "geometry": {
                 "coordinates": [64.8401, -147.7203],
@@ -612,6 +627,7 @@ module.exports = [
         "state": "Île-de-France",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [2.090, 48.930, 2.110, 48.950],
             "geometry": {
                 "coordinates": [48.9402, 2.1003],
@@ -652,6 +668,7 @@ module.exports = [
         "state": "Kyoto Prefecture",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [135.740, 35.010, 135.760, 35.030],
             "geometry": {
                 "coordinates": [35.0201, 135.7503],
@@ -691,6 +708,7 @@ module.exports = [
         "state": "Alberta",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-115.580, 51.170, -115.560, 51.190],
             "geometry": {
                 "coordinates": [51.1801, -115.5702],
@@ -731,6 +749,7 @@ module.exports = [
         "state": "Northland",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [174.080, -35.290, 174.100, -35.270],
             "geometry": {
                 "coordinates": [-35.2801, 174.0902],
@@ -771,6 +790,7 @@ module.exports = [
         "state": "Erongo",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [13.070, -23.420, 13.090, -23.400],
             "geometry": {
                 "coordinates": [-23.4101, 13.0802],
@@ -811,6 +831,7 @@ module.exports = [
         "state": "Amazonas",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-60.030, -3.480, -60.010, -3.460],
             "geometry": {
                 "coordinates": [-3.4701, -60.0202],
@@ -851,6 +872,7 @@ module.exports = [
         "state": "Northern Territory",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [133.860, -23.710, 133.880, -23.690],
             "geometry": {
                 "coordinates": [-23.7001, 133.8702],
@@ -891,6 +913,7 @@ module.exports = [
         "state": "Hawaii",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-155.910, 19.420, -155.890, 19.440],
             "geometry": {
                 "coordinates": [19.4301, -155.9002],
@@ -931,6 +954,7 @@ module.exports = [
         "state": "Tuscany",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [11.240, 43.760, 11.260, 43.780],
             "geometry": {
                 "coordinates": [43.7701, 11.2502],
@@ -971,6 +995,7 @@ module.exports = [
         "state": "New York",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-75.932, 42.071, -75.901, 42.092],
             "geometry": {
                 "coordinates": [42.0815, -75.9159],
@@ -1012,6 +1037,7 @@ module.exports = [
         "state": "South Carolina",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-78.925, 33.673, -78.893, 33.694],
             "geometry": {
                 "coordinates": [33.6831, -78.9091],
@@ -1052,6 +1078,7 @@ module.exports = [
         "state": "Arizona",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-111.809, 34.831, -111.778, 34.854],
             "geometry": {
                 "coordinates": [34.8423, -111.7935],
@@ -1092,6 +1119,7 @@ module.exports = [
         "state": "Wisconsin",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-89.420, 43.045, -89.400, 43.065],
             "geometry": {
                 "coordinates": [43.0552, -89.4103],
@@ -1132,6 +1160,7 @@ module.exports = [
         "state": "North Carolina",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-82.582, 35.550, -82.560, 35.570],
             "geometry": {
                 "coordinates": [35.5601, -82.5711],
@@ -1212,6 +1241,7 @@ module.exports = [
         "state": "California",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-116.565, 33.811, -116.535, 33.831],
             "geometry": {
                 "coordinates": [33.821, -116.550],
@@ -1252,6 +1282,7 @@ module.exports = [
         "state": "Oregon",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-121.338, 44.058, -121.307, 44.078],
             "geometry": {
                 "coordinates": [44.068, -121.322],
@@ -1292,6 +1323,7 @@ module.exports = [
         "state": "Kentucky",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-84.516, 38.014, -84.485, 38.035],
             "geometry": {
                 "coordinates": [38.025, -84.500],
@@ -1332,6 +1364,7 @@ module.exports = [
         "state": "Washington",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-122.341, 47.595, -122.310, 47.615],
             "geometry": {
                 "coordinates": [47.605, -122.325],
@@ -1372,6 +1405,7 @@ module.exports = [
         "state": "California",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-121.802, 36.235, -121.771, 36.255],
             "geometry": {
                 "coordinates": [36.245, -121.787],
@@ -1412,6 +1446,7 @@ module.exports = [
         "state": "Utah",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-109.601, 38.556, -109.570, 38.576],
             "geometry": {
                 "coordinates": [38.566, -109.586],
@@ -1452,6 +1487,7 @@ module.exports = [
         "state": "North Dakota",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-96.842, 46.855, -96.811, 46.875],
             "geometry": {
                 "coordinates": [46.865, -96.826],
@@ -1492,6 +1528,7 @@ module.exports = [
         "state": "North Carolina",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-82.567, 35.592, -82.536, 35.612],
             "geometry": {
                 "coordinates": [35.602, -82.551],
@@ -1532,6 +1569,7 @@ module.exports = [
         "state": "Alaska",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-149.895, 61.203, -149.864, 61.223],
             "geometry": {
                 "coordinates": [61.213, -149.879],
@@ -1572,6 +1610,7 @@ module.exports = [
         "state": "Colorado",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-105.299, 40.000, -105.268, 40.021],
             "geometry": {
                 "coordinates": [40.0104, -105.2835],
@@ -1612,6 +1651,7 @@ module.exports = [
         "state": "California",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-116.565, 33.811, -116.535, 33.831],
             "geometry": {
                 "coordinates": [33.821, -116.550],
@@ -1652,6 +1692,7 @@ module.exports = [
         "state": "Oregon",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-121.338, 44.058, -121.307, 44.078],
             "geometry": {
                 "coordinates": [44.068, -121.322],
@@ -1692,6 +1733,7 @@ module.exports = [
         "state": "Kentucky",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-84.516, 38.014, -84.485, 38.035],
             "geometry": {
                 "coordinates": [38.025, -84.500],
@@ -1732,6 +1774,7 @@ module.exports = [
         "state": "Washington",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-122.341, 47.595, -122.310, 47.615],
             "geometry": {
                 "coordinates": [47.605, -122.325],
@@ -1772,6 +1815,7 @@ module.exports = [
         "state": "California",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-121.812, 36.245, -121.781, 36.265],
             "geometry": {
                 "coordinates": [36.255, -121.797],
@@ -1812,6 +1856,7 @@ module.exports = [
         "state": "Minnesota",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-93.278, 44.963, -93.247, 44.983],
             "geometry": {
                 "coordinates": [44.973, -93.262],
@@ -1852,6 +1897,7 @@ module.exports = [
         "state": "New Mexico",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-106.005, 35.683, -105.974, 35.703],
             "geometry": {
                 "coordinates": [35.693, -105.989],
@@ -1892,6 +1938,7 @@ module.exports = [
         "state": "Florida",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-82.469, 27.931, -82.438, 27.951],
             "geometry": {
                 "coordinates": [27.941, -82.453],
@@ -1932,6 +1979,7 @@ module.exports = [
         "state": "Tennessee",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-86.794, 36.146, -86.763, 36.166],
             "geometry": {
                 "coordinates": [36.156, -86.779],
@@ -1972,6 +2020,7 @@ module.exports = [
         "state": "Arizona",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-111.659, 35.186, -111.628, 35.206],
             "geometry": {
                 "coordinates": [35.196, -111.644],
@@ -2012,6 +2061,7 @@ module.exports = [
         "state": "Oregon",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-121.331, 44.041, -121.300, 44.061],
             "geometry": {
                 "coordinates": [44.051, -121.315],
@@ -2052,6 +2102,7 @@ module.exports = [
         "state": "California",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-117.271, 32.851, -117.240, 32.871],
             "geometry": {
                 "coordinates": [32.861, -117.256],
@@ -2092,6 +2143,7 @@ module.exports = [
         "state": "Colorado",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-104.989, 39.724, -104.958, 39.744],
             "geometry": {
                 "coordinates": [39.734, -104.973],
@@ -2132,6 +2184,7 @@ module.exports = [
         "state": "Colorado",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-105.285, 40.006, -105.254, 40.026],
             "geometry": {
                 "coordinates": [40.016, -105.269],
@@ -2172,6 +2225,7 @@ module.exports = [
         "state": "Washington",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-117.429, 47.654, -117.398, 47.674],
             "geometry": {
                 "coordinates": [47.664, -117.414],
@@ -2212,6 +2266,7 @@ module.exports = [
         "state": "Oregon",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-123.070, 44.935, -123.039, 44.955],
             "geometry": {
                 "coordinates": [44.945, -123.054],
@@ -2252,6 +2307,7 @@ module.exports = [
         "state": "Arizona",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-112.087, 33.431, -112.056, 33.451],
             "geometry": {
                 "coordinates": [33.441, -112.071],
@@ -2292,6 +2348,7 @@ module.exports = [
         "state": "Utah",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-109.572, 38.567, -109.541, 38.587],
             "geometry": {
                 "coordinates": [38.577, -109.556],
@@ -2332,6 +2389,7 @@ module.exports = [
         "state": "Wisconsin",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-89.431, 43.065, -89.400, 43.085],
             "geometry": {
                 "coordinates": [43.075, -89.415],
@@ -2372,6 +2430,7 @@ module.exports = [
         "state": "Nebraska",
         "author": "66266bf983dd33289670361a",
         "geojson": {
+            "type": 'Feature',
             "bbox": [-95.989, 41.231, -95.958, 41.251],
             "geometry": {
                 "coordinates": [41.241, -95.973],
