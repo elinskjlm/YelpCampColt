@@ -33,9 +33,9 @@
                                 <div id="collapse[<%= i %>]" class="accordion-collapse collapse" aria-labelledby="heading[<%= i %>]" data-bs-parent="#accordionExample">
                                     <div class="accordion-body text-center">
                                         <img src="<%= img.thumbnail %>" alt="" class="img-thumbnail">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" name="deleteImages[]" value="<%= img.filename %>" id="campground[img][<%= i %>]">
-                                            <label class="form-check-label" for="campground[img][<%= i %>]">Delete this image with submission</label>
+                                        <div class="form-check form-switch d-flex justify-content-center">
+                                            <input class="form-check-input mx-1" type="checkbox" role="switch" name="deleteImages[]" value="<%= img.filename %>" id="campground[img][<%= i %>]">
+                                            <label class="form-check-label mx-1" for="campground[img][<%= i %>]">Delete this image with submission?</label>
                                         </div>
                                     </div>
                                 </div>

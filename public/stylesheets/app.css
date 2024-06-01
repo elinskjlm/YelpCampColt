@@ -6,3 +6,8 @@
     height: 300px;
     transition: height 2s ease-in-out .5s;
 }
+
+.glow:hover {
+    border-color: rgb(13, 110, 253);
+    box-shadow: 0px 0px 10px 2px rgb(13, 110, 253);
+  }

@@ -16,7 +16,7 @@ ImageSchema.virtual('micro').get(function() {
 })
 
 ImageSchema.virtual('show').get(function() {
-    return this.url.replace('/upload', '/upload/d_YelpCamp:fallbacks:fallBackImageGemini01_etskbd.jpg/b_black,c_pad,h_300,w_300/');
+    return this.url.replace('/upload', '/upload/d_YelpCamp:fallbacks:fallBackImageGemini01_etskbd.jpg/b_black,c_pad,h_200,w_200/');
 })
 
 const FeatureSchema = new Schema({
@@ -65,6 +65,11 @@ const CampgroundSchema = new Schema({
         }
     ],
 });
+
+CampgroundSchema.virtual('short').get(function() {
+    const maxLength = 70;
+    return this.description.length > maxLength ? this.description.substring(0, maxLength - 3) + '...' : this.description;
+})
 
 CampgroundSchema.post('findOneAndDelete', async function (doc) {
     if (doc) {
