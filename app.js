@@ -9,6 +9,7 @@ const methodOverride =      require('method-override');
 const ejsMate =             require('ejs-mate');
 const session =             require('express-session');
 const flash =               require('connect-flash');
+const helmet =              require('helmet');
 const ExpressError =        require('./utils/ExpressError');
 const campgroundRoutes =    require('./routes/campgrounds');
 const reviewRoutes =        require('./routes/reviews');
@@ -35,17 +36,63 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 const sessionConfig = {
+    name: 'session',
     secret: 'temporaryTODOreplaceIt',
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
+        // secure: true, // TODO uncomment
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
 app.use(session(sessionConfig));
 app.use(flash());
+
+const scriptSrcUrls = [
+    "https://cdn.jsdelivr.net/",
+    "https://unpkg.com/maplibre-gl@4.2.0/",
+    "https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.2.0/",
+];
+
+const styleSrcUrls = [
+    "https://demotiles.maplibre.org",
+    "https://unpkg.com/maplibre-gl@4.2.0/",
+    "https://unpkg.com/@maplibre/",
+    "https://cdn.jsdelivr.net/",
+];
+
+const connectSrcUrls = [
+    "https://tile.openstreetmap.org/",
+    "https://nominatim.openstreetmap.org/",
+    "https://demotiles.maplibre.org/font/",
+    
+];
+
+const fontSrcUrls = [];
+
+app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc:   [],
+          connectSrc:   ["'self'", ...connectSrcUrls],
+          fontSrc:      ["'self'", ...fontSrcUrls],
+          scriptSrc:    ["'self'", "'unsafe-inline'", ...scriptSrcUrls],
+          styleSrc:     ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+          workerSrc:    ["'self'", "blob:"],
+          objectSrc:    [],
+          imgSrc:       [
+            "'self'",
+            "blob:",
+            "data:",
+            "https://res.cloudinary.com/dis3rrz4f/",
+          ]
+        },
+      },
+    })
+  );
 
 app.use(passport.initialize());
 app.use(passport.session());
