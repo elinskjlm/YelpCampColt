@@ -117,6 +117,10 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/about', (req, res) => {
+    res.render('about')
+})
+
 app.all('*' , (req, res, next) => {
     next(new ExpressError(`Page not found: ${req.url}`, 404));
 })

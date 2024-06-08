@@ -1,0 +1,183 @@
+<% layout('layouts/boilerplate') %>
+    <h1>About This Project</h1>
+    <section class="general">
+        <h3>General</h3>
+        <p>This project is an implementation of the Yelp Camp project from Colt Steele's course <a
+                href="https://www.udemy.com/course/the-web-developer-bootcamp/">The Web Developer Bootcamp 2024</a>.
+            <small>(Note: The title suggests it's updated for 2024, but it's misleading)</small>
+        </p>
+        <p>While generally following the course, there are a few deviations in this implementation. The main differences
+            are
+            listed below.</p>
+        <p>Deployed in June 2024, it is planned to be maintained until December 2024, with live deployment until June
+            2025.
+            Please note that all data and locations are fictional.</p>
+    </section>
+
+    <section class="stack">
+        <h3>Tools Used</h3>
+        <ul>
+            <li>Node.js - JavaScript runtime for server-side development.</li>
+            <li>Express - Web application framework.</li>
+            <li>MongoDB - NoSQL database.</li>
+            <li>Mongoose - MongoDB object modeling for Node.js.</li>
+            <li>Bootstrap - Front-end framework.</li>
+            <li>Cloudinary - Image upload and management service (proprietary).</li>
+            <li>Passport.js - Authentication middleware.</li>
+            <li>MapLibre - Open-source mapping library.</li>
+        </ul>
+    </section>
+
+    <section class="differences hidden">
+        <h3>Main Differences from the Original Course</h3> <!--TODO-->
+        <ul>
+            <li>Using MapLibre instead of MapBox to prefer free and open-source options.</li>
+            <li>Implementing Nominatim search (forward and reverse) for geo data.</li>
+            <li>Feature structure? aggregate $project?</li>
+            <li>Seeding data populated with AI help, using a different internal structure from the course.</li>
+            <li>Remembering review draft when the user is sent to login.</li>
+            <li>Small style differences.</li>
+        </ul>
+    </section>
+
+    <section class="evaluation">
+        <h3>Evaluation</h3>
+        <p>Personal evaluation of various aspects of the project.</p>
+        <ul>
+            <li><strong>Code:</strong>
+                <p>The code works and follows Colt's structure, but it's not well-organized, with inconsistencies
+                    in style and standards. Future improvements should include refactoring for better readability
+                    and maintainability.
+                </p>
+            </li>
+            <li><strong>Security:</strong>
+                <p>Basic security measures implemented such as Helmet and password hashing. More robust
+                    security protocols are recommended.</p>
+            </li>
+            <li><strong>Scalability:</strong>
+                <p>The site was not tested or designed to be scalable. It is possible to add more campgrounds
+                    or reviews, but the UI will become cluttered, and the lack of a search option will become a notable
+                    flaw. Scaling would also require replacing some of the free tools used with paid ones (e.g.,
+                    Nominatim's limit on requests, Cloudinary's space limits).</p>
+            </li>
+            <li><strong>Extensibility:</strong>
+                <p>Adding new features may require extensive modifications to existing components due to the lack
+                    of proper encapsulation.</p>
+            </li>
+            <li><strong>Performance:</strong>
+                <p>Uploading images and updating maps can be slow. Actions to minimize lag should be part of
+                    future refactoring.
+                </p>
+            </li>
+            <li><strong>UI and Style:</strong>
+                <p>Basic and primitive, needing more sophisticated design and style.</p>
+            </li>
+            <li><strong>User Experience:</strong>
+                <p>The site needs significant improvements to enhance UX. Notable flaws include slow performance,
+                    lack of search options (other than manual map location or scrolling through campgrounds), and no
+                    dark
+                    mode.</p>
+            </li>
+            <li><strong>Responsivity:</strong>
+                <p>Planned as mobile-first, the UI works and appears properly on various screen sizes, ranging
+                    from mobile to PC.</p>
+            </li>
+            <li><strong>Accessibility:</strong>
+                <p>The site lacks special accessibility features for disabled users. Supporting screen readers is a
+                    must in future refactoring. The site does have simple colors and is forced-dark-mode friendly.</p>
+            </li>
+            <li><strong>Transparency:</strong>
+                <p>Efforts are made to maintain transparency in project progress and updates, but detailed logs
+                    and documentation are sparse.</p>
+            </li>
+            <li><strong>Liberty:</strong>
+                <p>The project is free and open-source under the WTFPL license, and efforts were made to keep it
+                    as FOSS-based as possible. Unfortunately, it relies on Cloudinary, which is a non-free service.
+                    Different packages and parts used in it are under their own licenses. Special attention was put to
+                    avoid using the non-free MapBox service, replacing it with MapLibre, including <a
+                        href="https://github.com/maplibre/demotiles">glyphs</a> that do not require an API key.</p>
+            </li>
+            <li><strong>Privacy:</strong>
+                <p>The site uses cookies for authentication and may use cookies in the future to remember
+                    user preferences such as dark/light mode and map background. The project does not collect personal
+                    information or metadata and advises users to avoid using real information. The source code is
+                    available on GitHub <a href="...">here</a>. However, users should not just trust this declaration
+                    and remember that data collection is technically possible from each request. Also, all posts made
+                    are
+                    visible to everyone. Moreover, the front-end relies on JS scripts in the browser, so it is not
+                    friendly for users blocking JS in their browsers.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="licenses hidden"> <!--TODO-->
+        <h3>Licenses and Credits</h3>
+        <p>The project is under the WTFPL license.</p>
+        <p>The project makes use of:</p>
+        <div class="p-2 m-3 w-50">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Source</th>
+                        <th scope="col">License</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>maplibre-gl-js</td>
+                        <td><a
+                                href="https://github.com/maplibre/maplibre-gl-js?tab=License-1-ov-file#readme">License</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Nominatim</td>
+                        <td><a href="https://operations.osmfoundation.org/policies/nominatim/">License</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>OpenStreetMap</td>
+                        <td><a href="https://www.openstreetmap.org/copyright/">License</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>🤮🤮🤮🤮🤮</td>
+                        <td><a href="#">🤮🤮🤮🤮🤮</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="todo">
+        <h3>Known Issues, Open Tasks, and Future Ideas</h3>
+        <p><strong>Known Issues:</strong></p>
+        <ul>
+            <li>UI performance lag</li>
+            <li>Lack of accessibility features</li>
+            <li>Relies on JavaScript in the browser, leading to a poor experience for users who block JavaScript.</li>
+        </ul>
+
+        <p><strong>Open Tasks:</strong></p>
+        <ul>
+            <li>Improve security measures.</li>
+            <li>Add search functionality.</li>
+            <li>Enhance user interface and design.</li>
+        </ul>
+
+        <p><strong>Future Ideas:</strong></p>
+        <ul>
+            <li>User page detailing all user contributions.</li>
+            <li>Dark mode.</li>
+            <li>Implement API access.</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h3>Source, Contact, and Reporting Issues</h3>
+        <p>Source code <a href="https://github.com/elinskjlm/YelpCampColt">repo</a>.</p>
+        <p>For any inquiries or to report issues, please contact <a
+                href="mailto:elinskjlm@gamil.com">your-email@example.com</a>.</p>
+    </section>
