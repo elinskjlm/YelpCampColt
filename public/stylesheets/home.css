@@ -1,0 +1,55 @@
+body {
+    height: 100vh;
+    background-image:
+        linear-gradient( #00000080, #00000080),
+        url("../assets/bgImages/colorbg04.jpeg");
+    background-size: cover;
+    background-position: 90%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-shadow: 5px 5px 10px #181948;
+    box-shadow: inset 0 0 5rem #181948;
+
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+span a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: #f8f9fa80;
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover {
+    color: #f8f9fa80;
+    border-bottom-color: #f8f9fa80;
+}
+
+.nav-link.active {
+    color: #ffffffcf;
+    border-bottom-color: #ffffffcf;
+}
+
+.lg-only {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .lg-only {
+        display: inline-block;
+    }
+}
+
