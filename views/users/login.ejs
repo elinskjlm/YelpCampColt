@@ -1,13 +1,25 @@
 <% layout('layouts/boilerplate') %>
-<h1>Login</h1>
-<form action="/login" method="post" class="needs-validation" novalidate>
-    <div class="mb-3">
-        <label class="form-label" for="username">Username</label>
-        <input class="form-control" type="text" name="username" id="loginUsername" placeholder="username" required autofocus>
+<link rel="stylesheet" href="./stylesheets/access.css">
+<div class="row">
+    <div class="d-flex justify-content-center align-items-center col-md-6 offset-md-3 col-xl-4 offset-xl-4 access-form">
+        <div class="card shadow narrow-card my-auto">
+            <img src="./assets/bgImages/greybg01.jpeg" alt="" class="card-img-top short-img">
+            <div class="card-body">
+                <h3 class="card-title">Login</h3>
+                <form action="/login" method="post" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="username">Username</label>
+                        <input class="form-control" type="text" name="username" id="loginUsername" placeholder="username" required autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="loginPassword" placeholder="password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="loginPassword" placeholder="password" required>
-    </div>
-    <button class="btn btn-success">Login</button>
-</form>
+</div>

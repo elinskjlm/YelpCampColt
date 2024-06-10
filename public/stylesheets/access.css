@@ -1,0 +1,21 @@
+.narrow-card {
+    width: 18rem;
+}
+
+.short-img {
+    height: 10rem; 
+    object-fit: cover;
+}
+
+.access-form {
+    min-height: 80vh;
+}
+
+.mt-toggle {
+    margin-top: 0 !important;
+}
+
+.parent-to-form .access-form {
+    margin: auto;
+    width: auto;
+}
