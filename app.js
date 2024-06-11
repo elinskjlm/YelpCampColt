@@ -21,7 +21,7 @@ const LocalStrategy =       require('passport-local');
 const dbUrl =               process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 const port =                process.env.PORT;
 const secret =              process.env.SECRET;
-// const {tempFunc} = require('./middleware');
+
 const app = express();
 
 mongoose.connect(dbUrl);
@@ -56,7 +56,7 @@ const sessionConfig = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        // secure: true, // TODO uncomment
+        secure: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // miliseconds
         maxAge: 1000 * 60 * 60 * 24 * 7 // miliseconds
     }
@@ -122,7 +122,7 @@ app.use((req, res, next) => {
     next();
 })
 
-// app.use(tempFunc)
+
 app.use('/', userRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/reviews', reviewRoutes);
