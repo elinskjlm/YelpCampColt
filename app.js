@@ -8,6 +8,7 @@ const mongoose =            require('mongoose');
 const methodOverride =      require('method-override');
 const ejsMate =             require('ejs-mate');
 const session =             require('express-session');
+const MongoStore =          require('connect-mongo');
 const flash =               require('connect-flash');
 const helmet =              require('helmet');
 const ExpressError =        require('./utils/ExpressError');
@@ -17,11 +18,13 @@ const userRoutes =          require('./routes/users');
 const User =                require('./models/user');
 const passport =            require('passport');
 const LocalStrategy =       require('passport-local');
+const dbUrl =               process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+const port =                process.env.PORT;
+const secret =              process.env.SECRET;
 // const {tempFunc} = require('./middleware');
 const app = express();
-const port = 3000;
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp');
+mongoose.connect(dbUrl);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection Error:'));
 db.once('open', () => {
@@ -35,16 +38,27 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 3600, // seconds
+})
+
+store.on('error', function(e) {
+    console.log('SESSION STORE ERROR', e)
+})
+
 const sessionConfig = {
     name: 'session',
-    secret: 'temporaryTODOreplaceIt',
+    secret,
+    store,
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
         // secure: true, // TODO uncomment
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        maxAge: 1000 * 60 * 60 * 24 * 7
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // miliseconds
+        maxAge: 1000 * 60 * 60 * 24 * 7 // miliseconds
     }
 }
 app.use(session(sessionConfig));
